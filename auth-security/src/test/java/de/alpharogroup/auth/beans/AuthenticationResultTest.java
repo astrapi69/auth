@@ -20,21 +20,70 @@
  */
 package de.alpharogroup.auth.beans;
 
+import static org.junit.Assert.assertNotNull;
+import static org.testng.Assert.assertEquals;
+
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.util.Optional;
+
 import org.meanbean.test.BeanTester;
 import org.testng.annotations.Test;
+
+import de.alpharogroup.collections.set.SetFactory;
+import de.alpharogroup.evaluate.object.api.ContractViolation;
+import de.alpharogroup.evaluate.object.checkers.EqualsHashCodeAndToStringCheck;
 
 /**
  * The unit test class for the class {@link AuthenticationResult}
  */
-public class AuthenticationResultTest
-{
+public class AuthenticationResultTest {
+
+	/**
+	 * Test method for {@link AuthenticationResult} constructors and builders
+	 */
+	@Test
+	public final void testConstructors()
+	{
+		AuthenticationResult<String, String> model = new AuthenticationResult<>();
+		assertNotNull(model);
+		model = new AuthenticationResult<>(SetFactory.newHashSet("foo"), "value");
+		assertNotNull(model);
+		model = AuthenticationResult.<String, String>builder().build();
+		assertNotNull(model);
+	}
+	
+	/**
+	 * Test method for {@link AuthenticationResult#equals(Object)} ,
+	 * {@link AuthenticationResult#hashCode()} and
+	 * {@link AuthenticationResult#toString()}
+	 * 
+	 * @throws IllegalAccessException
+	 *             if the caller does not have access to the property accessor method
+	 * @throws InstantiationException
+	 *             if a new instance of the bean's class cannot be instantiated
+	 * @throws InvocationTargetException
+	 *             if the property accessor method throws an exception
+	 * @throws NoSuchMethodException
+	 *             if an accessor method for this property cannot be found
+	 * @throws IOException
+	 *             Signals that an I/O exception has occurred
+	 */
+	@Test
+	public void testEqualsHashcodeAndToStringWithClass() throws NoSuchMethodException, IllegalAccessException,
+			InvocationTargetException, InstantiationException, IOException {
+		Optional<ContractViolation> expected;
+		Optional<ContractViolation> actual;
+		actual = EqualsHashCodeAndToStringCheck.equalsHashcodeAndToString(AuthenticationResult.class);
+		expected = Optional.empty();
+		assertEquals(expected, actual);
+	}
 
 	/**
 	 * Test method for {@link AuthenticationResult}
 	 */
 	@Test
-	public void testWithBeanTester()
-	{
+	public void testWithBeanTester() {
 		final BeanTester beanTester = new BeanTester();
 		beanTester.testBean(AuthenticationResult.class);
 	}
