@@ -21,6 +21,7 @@
 package de.alpharogroup.auth.sign.in;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,23 +29,35 @@ import lombok.Setter;
 import lombok.ToString;
 
 /**
- * The class {@link BaseUsernameSignInModel} is an implementation from the interface
- * {@link UsernameSignInModel}.
+ * The class {@link BaseUsernameSignInModel} is an implementation from the
+ * interface {@link UsernameSignInModel}.
  */
 @Getter
 @Setter
-@EqualsAndHashCode(callSuper = true)
-@ToString(callSuper = true)
+@EqualsAndHashCode
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class BaseUsernameSignInModel extends BaseSignInModel implements UsernameSignInModel
-{
+@Builder(toBuilder = true)
+public class BaseUsernameSignInModel implements UsernameSignInModel {
 
 	/**
 	 * The Constant serialVersionUID.
 	 */
 	private static final long serialVersionUID = 1L;
 
+	/** The Constant EMAIL. */
+	public static final String EMAIL = "email";
+	
+	/** The Constant PASSWORD. */
+	public static final String PASSWORD = "password";
+
+	/** The email. */
+	private String email;
+
+	/** The password. */
+	private String password;
+	
 	/** The username. */
 	private String username;
 

@@ -78,6 +78,7 @@ public class AuthTokenTest
 		expected = Optional.empty();
 		assertEquals(expected, actual);
 	}
+	
 	/**
 	 * Test method for {@link AuthToken}
 	 */
