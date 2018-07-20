@@ -22,6 +22,10 @@ The source code comes under the liberal MIT License, making auth project great f
 
 [![Javadoc](https://javadoc-emblem.rhcloud.com/doc/de.alpharogroup/auth/badge.svg)](http://www.javadoc.io/doc/de.alpharogroup/auth-security) auth-security
 
+## Maven dependency
+
+Maven dependency is now on sonatype.
+Check out [sonatype repository](https://oss.sonatype.org/index.html#nexus-search;gav~de.alpharogroup~auth~~~) for latest snapshots and releases.
 
 You can first define the version properties:
 
