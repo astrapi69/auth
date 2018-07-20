@@ -21,6 +21,7 @@
 package de.alpharogroup.auth.sign.up;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -33,17 +34,31 @@ import lombok.ToString;
  */
 @Getter
 @Setter
-@EqualsAndHashCode(callSuper = true)
-@ToString(callSuper = true)
+@EqualsAndHashCode
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class BaseUsernameSignUpModel extends BaseSignUpModel implements UsernameSignUpModel
+@Builder(toBuilder = true)
+public class BaseUsernameSignUpModel implements UsernameSignUpModel
 {
 
 	/**
 	 * The Constant serialVersionUID.
 	 */
 	private static final long serialVersionUID = 1L;
+
+	/** The email. */
+	private String email;
+
+	/** The password. */
+	private String password;
+
+	/** The repeated password. */
+	private String repeatPassword;
+
+	/** The term of use accepted. */
+	@Builder.Default
+	private boolean termOfUseAccepted = true;
 
 	/** The username. */
 	private String username;

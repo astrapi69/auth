@@ -20,14 +20,73 @@
  */
 package de.alpharogroup.auth.sign.up;
 
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+import static org.testng.Assert.assertEquals;
+
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.util.Optional;
+
 import org.meanbean.test.BeanTester;
 import org.testng.annotations.Test;
+
+import de.alpharogroup.evaluate.object.api.ContractViolation;
+import de.alpharogroup.evaluate.object.checkers.EqualsHashCodeAndToStringCheck;
 
 /**
  * The unit test class for the class {@link BaseUsernameSignUpModel}
  */
 public class BaseUsernameSignUpModelTest
 {
+
+	/**
+	 * Test method for {@link BaseUsernameSignUpModel} constructors and builders
+	 */
+	@Test
+	public final void testConstructors() {
+		BaseUsernameSignUpModel model = new BaseUsernameSignUpModel();
+		assertNotNull(model);
+		model = new BaseUsernameSignUpModel("foo@bar.org", "secret", "secret", true, "jim");
+		assertNotNull(model);
+		assertTrue(model.getEmail().equals("foo@bar.org"));
+		assertTrue(model.getPassword().equals("secret"));
+		assertTrue(model.getRepeatPassword().equals("secret"));
+		assertTrue(model.isTermOfUseAccepted() == true);
+		assertTrue(model.getUsername().equals("jim"));
+		model = BaseUsernameSignUpModel.builder().email("foo@bar.org").password("secret").repeatPassword("secret")
+				.termOfUseAccepted(true).username("jim").build();
+		assertNotNull(model);
+		assertTrue(model.getEmail().equals("foo@bar.org"));
+		assertTrue(model.getPassword().equals("secret"));
+		assertTrue(model.getRepeatPassword().equals("secret"));
+		assertTrue(model.isTermOfUseAccepted() == true);
+		assertTrue(model.getUsername().equals("jim"));
+	}
+
+	/**
+	 * Test method for {@link BaseUsernameSignUpModel#equals(Object)} ,
+	 * {@link BaseUsernameSignUpModel#hashCode()} and {@link BaseUsernameSignUpModel#toString()}
+	 * 
+	 * @throws IllegalAccessException    if the caller does not have access to the
+	 *                                   property accessor method
+	 * @throws InstantiationException    if a new instance of the bean's class
+	 *                                   cannot be instantiated
+	 * @throws InvocationTargetException if the property accessor method throws an
+	 *                                   exception
+	 * @throws NoSuchMethodException     if an accessor method for this property
+	 *                                   cannot be found
+	 * @throws IOException               Signals that an I/O exception has occurred
+	 */
+	@Test
+	public void testEqualsHashcodeAndToStringWithClass() throws NoSuchMethodException, IllegalAccessException,
+			InvocationTargetException, InstantiationException, IOException {
+		Optional<ContractViolation> expected;
+		Optional<ContractViolation> actual;
+		actual = EqualsHashCodeAndToStringCheck.equalsHashcodeAndToString(BaseUsernameSignUpModel.class);
+		expected = Optional.empty();
+		assertEquals(expected, actual);
+	}
 
 	/**
 	 * Test method for {@link BaseUsernameSignUpModel}

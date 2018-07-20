@@ -20,8 +20,8 @@
  */
 package de.alpharogroup.auth.sign.up;
 
-import de.alpharogroup.auth.sign.in.BaseSignInModel;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -34,22 +34,29 @@ import lombok.ToString;
  */
 @Getter
 @Setter
-@EqualsAndHashCode(callSuper = true)
-@ToString(callSuper = true)
+@EqualsAndHashCode
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class BaseSignUpModel extends BaseSignInModel implements SimpleSignUpModel
-{
+@Builder(toBuilder = true)
+public class BaseSignUpModel implements SimpleSignUpModel {
 
 	/**
 	 * The Constant serialVersionUID.
 	 */
 	private static final long serialVersionUID = 1L;
 
-	/** The repeatpassword. */
+	/** The email. */
+	private String email;
+
+	/** The password. */
+	private String password;
+
+	/** The repeated password. */
 	private String repeatPassword;
 
 	/** The term of use accepted. */
-	private Boolean termOfUseAccepted = Boolean.TRUE;
+	@Builder.Default
+	private boolean termOfUseAccepted = true;
 
 }

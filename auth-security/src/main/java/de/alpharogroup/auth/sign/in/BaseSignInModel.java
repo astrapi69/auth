@@ -48,11 +48,6 @@ public class BaseSignInModel implements SignInModel
 	 */
 	private static final long serialVersionUID = 1L;
 
-	/** The Constant EMAIL. */
-	public static final String EMAIL = "email";
-	/** The Constant PASSWORD. */
-	public static final String PASSWORD = "password";
-
 	/** The email. */
 	private String email;
 
