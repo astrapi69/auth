@@ -111,11 +111,11 @@ or over flattr: <a href="http://flattr.com/thing/4152938/astrapi69auth-on-GitHub
 <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
 </a>
 
-# Similar projects
+# 
 
 Here is a list of awesome projects:
 
- * [random-beans](https://github.com/benas/random-beans) Because life is too short to generate random Java beans by hand..
+ * [spring-security](https://github.com/spring-projects/spring-security) Spring Security provides security services for the Spring IO Platform
 
 ## Credits
 
