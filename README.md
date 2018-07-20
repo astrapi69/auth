@@ -6,7 +6,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/astrapi69/auth/badge.svg?branch=develop)](https://coveralls.io/github/astrapi69/auth?branch=master) 
 [![Open Issues](https://img.shields.io/github/issues/astrapi69/auth.svg?style=flat)](https://github.com/astrapi69/auth/issues) 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.alpharogroup/auth/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.alpharogroup/auth)
-[![Javadocs](http://www.javadoc.io/badge/de.alpharogroup/auth.svg)](http://www.javadoc.io/doc/de.alpharogroup/auth)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](http://opensource.org/licenses/MIT)
 
 </div>
