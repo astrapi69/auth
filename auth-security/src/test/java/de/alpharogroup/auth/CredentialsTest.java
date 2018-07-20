@@ -37,8 +37,8 @@ public class CredentialsTest
 
 
 	/**
-	 * Test method for {@link Credentials#equals(Object)} , {@link Credentials#hashCode()}
-	 * and {@link Credentials#toString()}
+	 * Test method for {@link Credentials#equals(Object)} , {@link Credentials#hashCode()} and
+	 * {@link Credentials#toString()}
 	 */
 	@Test
 	public void testCredentials()

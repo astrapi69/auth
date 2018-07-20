@@ -37,13 +37,15 @@ import de.alpharogroup.evaluate.object.checkers.EqualsHashCodeAndToStringCheck;
 /**
  * The unit test class for the class {@link BaseSignUpModel}
  */
-public class BaseSignUpModelTest {
+public class BaseSignUpModelTest
+{
 
 	/**
 	 * Test method for {@link BaseSignUpModel} constructors and builders
 	 */
 	@Test
-	public final void testConstructors() {
+	public final void testConstructors()
+	{
 		BaseSignUpModel model = new BaseSignUpModel();
 		assertNotNull(model);
 		model.setEmail("foo@bar.org");
@@ -60,8 +62,8 @@ public class BaseSignUpModelTest {
 		assertTrue(model.getPassword().equals("secret"));
 		assertTrue(model.getRepeatPassword().equals("secret"));
 		assertTrue(model.isTermOfUseAccepted() == true);
-		model = BaseSignUpModel.builder().email("foo@bar.org").password("secret").repeatPassword("secret")
-				.termOfUseAccepted(true).build();
+		model = BaseSignUpModel.builder().email("foo@bar.org").password("secret")
+			.repeatPassword("secret").termOfUseAccepted(true).build();
 		assertNotNull(model);
 		assertTrue(model.getEmail().equals("foo@bar.org"));
 		assertTrue(model.getPassword().equals("secret"));
@@ -70,22 +72,24 @@ public class BaseSignUpModelTest {
 	}
 
 	/**
-	 * Test method for {@link BaseSignUpModel#equals(Object)} ,
-	 * {@link BaseSignUpModel#hashCode()} and {@link BaseSignUpModel#toString()}
+	 * Test method for {@link BaseSignUpModel#equals(Object)} , {@link BaseSignUpModel#hashCode()}
+	 * and {@link BaseSignUpModel#toString()}
 	 *
-	 * @throws IllegalAccessException    if the caller does not have access to the
-	 *                                   property accessor method
-	 * @throws InstantiationException    if a new instance of the bean's class
-	 *                                   cannot be instantiated
-	 * @throws InvocationTargetException if the property accessor method throws an
-	 *                                   exception
-	 * @throws NoSuchMethodException     if an accessor method for this property
-	 *                                   cannot be found
-	 * @throws IOException               Signals that an I/O exception has occurred
+	 * @throws IllegalAccessException
+	 *             if the caller does not have access to the property accessor method
+	 * @throws InstantiationException
+	 *             if a new instance of the bean's class cannot be instantiated
+	 * @throws InvocationTargetException
+	 *             if the property accessor method throws an exception
+	 * @throws NoSuchMethodException
+	 *             if an accessor method for this property cannot be found
+	 * @throws IOException
+	 *             Signals that an I/O exception has occurred
 	 */
 	@Test
-	public void testEqualsHashcodeAndToStringWithClass() throws NoSuchMethodException, IllegalAccessException,
-			InvocationTargetException, InstantiationException, IOException {
+	public void testEqualsHashcodeAndToStringWithClass() throws NoSuchMethodException,
+		IllegalAccessException, InvocationTargetException, InstantiationException, IOException
+	{
 		Optional<ContractViolation> expected;
 		Optional<ContractViolation> actual;
 		actual = EqualsHashCodeAndToStringCheck.equalsHashcodeAndToString(BaseSignUpModel.class);
@@ -97,7 +101,8 @@ public class BaseSignUpModelTest {
 	 * Test method for {@link BaseSignUpModel}
 	 */
 	@Test
-	public void testWithBeanTester() {
+	public void testWithBeanTester()
+	{
 		final BeanTester beanTester = new BeanTester();
 		beanTester.testBean(BaseSignUpModel.class);
 	}

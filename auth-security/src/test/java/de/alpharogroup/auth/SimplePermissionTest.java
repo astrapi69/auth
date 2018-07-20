@@ -108,7 +108,7 @@ public class SimplePermissionTest extends BaseTestCase
 		actual = expected.equals(compare);
 		assertTrue(actual);
 	}
-	
+
 	/**
 	 * Test method for {@link SimplePermission}
 	 */

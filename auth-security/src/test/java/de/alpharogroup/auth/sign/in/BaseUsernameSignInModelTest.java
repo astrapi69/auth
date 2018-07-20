@@ -48,22 +48,22 @@ public class BaseUsernameSignInModelTest
 	{
 		BaseUsernameSignInModel model = new BaseUsernameSignInModel();
 		assertNotNull(model);
-		model = new BaseUsernameSignInModel("foo@bar.org", "secret", "jim");		
+		model = new BaseUsernameSignInModel("foo@bar.org", "secret", "jim");
 		assertNotNull(model);
 		assertTrue(model.getEmail().equals("foo@bar.org"));
 		assertTrue(model.getPassword().equals("secret"));
 		assertTrue(model.getUsername().equals("jim"));
-		model = BaseUsernameSignInModel.builder().email("foo@bar.org").password("secret").username("jim").build();		
+		model = BaseUsernameSignInModel.builder().email("foo@bar.org").password("secret")
+			.username("jim").build();
 		assertNotNull(model);
 		assertTrue(model.getEmail().equals("foo@bar.org"));
 		assertTrue(model.getPassword().equals("secret"));
 		assertTrue(model.getUsername().equals("jim"));
 	}
-	
+
 	/**
 	 * Test method for {@link BaseUsernameSignInModel#equals(Object)} ,
-	 * {@link BaseUsernameSignInModel#hashCode()} and
-	 * {@link BaseUsernameSignInModel#toString()}
+	 * {@link BaseUsernameSignInModel#hashCode()} and {@link BaseUsernameSignInModel#toString()}
 	 * 
 	 * @throws IllegalAccessException
 	 *             if the caller does not have access to the property accessor method
@@ -77,15 +77,17 @@ public class BaseUsernameSignInModelTest
 	 *             Signals that an I/O exception has occurred
 	 */
 	@Test
-	public void testEqualsHashcodeAndToStringWithClass() throws NoSuchMethodException, IllegalAccessException,
-			InvocationTargetException, InstantiationException, IOException {
+	public void testEqualsHashcodeAndToStringWithClass() throws NoSuchMethodException,
+		IllegalAccessException, InvocationTargetException, InstantiationException, IOException
+	{
 		Optional<ContractViolation> expected;
 		Optional<ContractViolation> actual;
-		actual = EqualsHashCodeAndToStringCheck.equalsHashcodeAndToString(BaseUsernameSignInModel.class);
+		actual = EqualsHashCodeAndToStringCheck
+			.equalsHashcodeAndToString(BaseUsernameSignInModel.class);
 		expected = Optional.empty();
 		assertEquals(expected, actual);
 	}
-	
+
 	/**
 	 * Test method for {@link BaseUsernameSignInModel}
 	 */

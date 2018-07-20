@@ -29,8 +29,8 @@ import lombok.Setter;
 import lombok.ToString;
 
 /**
- * The class {@link BaseUsernameSignInModel} is an implementation from the
- * interface {@link UsernameSignInModel}.
+ * The class {@link BaseUsernameSignInModel} is an implementation from the interface
+ * {@link UsernameSignInModel}.
  */
 @Getter
 @Setter
@@ -39,7 +39,8 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder(toBuilder = true)
-public class BaseUsernameSignInModel implements UsernameSignInModel {
+public class BaseUsernameSignInModel implements UsernameSignInModel
+{
 
 	/**
 	 * The Constant serialVersionUID.
@@ -51,7 +52,7 @@ public class BaseUsernameSignInModel implements UsernameSignInModel {
 
 	/** The password. */
 	private String password;
-	
+
 	/** The username. */
 	private String username;
 

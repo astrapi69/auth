@@ -30,10 +30,10 @@ public interface SignInModel extends Serializable
 
 	/** The Constant EMAIL. */
 	static final String EMAIL = "email";
-	
+
 	/** The Constant PASSWORD. */
 	static final String PASSWORD = "password";
-	
+
 	/**
 	 * Gets the email.
 	 *

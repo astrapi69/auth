@@ -37,7 +37,8 @@ import de.alpharogroup.evaluate.object.checkers.EqualsHashCodeAndToStringCheck;
 /**
  * The unit test class for the class {@link AuthenticationResult}
  */
-public class AuthenticationResultTest {
+public class AuthenticationResultTest
+{
 
 	/**
 	 * Test method for {@link AuthenticationResult} constructors and builders
@@ -49,14 +50,13 @@ public class AuthenticationResultTest {
 		assertNotNull(model);
 		model = new AuthenticationResult<>(SetFactory.newHashSet("foo"), "value");
 		assertNotNull(model);
-		model = AuthenticationResult.<String, String>builder().build();
+		model = AuthenticationResult.<String, String> builder().build();
 		assertNotNull(model);
 	}
-	
+
 	/**
 	 * Test method for {@link AuthenticationResult#equals(Object)} ,
-	 * {@link AuthenticationResult#hashCode()} and
-	 * {@link AuthenticationResult#toString()}
+	 * {@link AuthenticationResult#hashCode()} and {@link AuthenticationResult#toString()}
 	 * 
 	 * @throws IllegalAccessException
 	 *             if the caller does not have access to the property accessor method
@@ -70,11 +70,13 @@ public class AuthenticationResultTest {
 	 *             Signals that an I/O exception has occurred
 	 */
 	@Test
-	public void testEqualsHashcodeAndToStringWithClass() throws NoSuchMethodException, IllegalAccessException,
-			InvocationTargetException, InstantiationException, IOException {
+	public void testEqualsHashcodeAndToStringWithClass() throws NoSuchMethodException,
+		IllegalAccessException, InvocationTargetException, InstantiationException, IOException
+	{
 		Optional<ContractViolation> expected;
 		Optional<ContractViolation> actual;
-		actual = EqualsHashCodeAndToStringCheck.equalsHashcodeAndToString(AuthenticationResult.class);
+		actual = EqualsHashCodeAndToStringCheck
+			.equalsHashcodeAndToString(AuthenticationResult.class);
 		expected = Optional.empty();
 		assertEquals(expected, actual);
 	}
@@ -83,7 +85,8 @@ public class AuthenticationResultTest {
 	 * Test method for {@link AuthenticationResult}
 	 */
 	@Test
-	public void testWithBeanTester() {
+	public void testWithBeanTester()
+	{
 		final BeanTester beanTester = new BeanTester();
 		beanTester.testBean(AuthenticationResult.class);
 	}

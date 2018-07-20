@@ -52,10 +52,9 @@ public class AuthTokenTest
 		model = AuthToken.builder().build();
 		assertNotNull(model);
 	}
-	
+
 	/**
-	 * Test method for {@link AuthToken#equals(Object)} ,
-	 * {@link AuthToken#hashCode()} and
+	 * Test method for {@link AuthToken#equals(Object)} , {@link AuthToken#hashCode()} and
 	 * {@link AuthToken#toString()}
 	 * 
 	 * @throws IllegalAccessException
@@ -70,15 +69,16 @@ public class AuthTokenTest
 	 *             Signals that an I/O exception has occurred
 	 */
 	@Test
-	public void testEqualsHashcodeAndToStringWithClass() throws NoSuchMethodException, IllegalAccessException,
-			InvocationTargetException, InstantiationException, IOException {
+	public void testEqualsHashcodeAndToStringWithClass() throws NoSuchMethodException,
+		IllegalAccessException, InvocationTargetException, InstantiationException, IOException
+	{
 		Optional<ContractViolation> expected;
 		Optional<ContractViolation> actual;
 		actual = EqualsHashCodeAndToStringCheck.equalsHashcodeAndToString(AuthToken.class);
 		expected = Optional.empty();
 		assertEquals(expected, actual);
 	}
-	
+
 	/**
 	 * Test method for {@link AuthToken}
 	 */

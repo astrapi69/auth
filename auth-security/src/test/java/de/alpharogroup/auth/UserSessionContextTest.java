@@ -123,7 +123,7 @@ public class UserSessionContextTest
 		session2 = sessionContext.getSession(session.getId());
 		assertNull(session2);
 	}
-	
+
 	/**
 	 * Test method for {@link UserSessionContext}
 	 */

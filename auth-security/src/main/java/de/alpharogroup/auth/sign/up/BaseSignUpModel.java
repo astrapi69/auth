@@ -39,7 +39,8 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder(toBuilder = true)
-public class BaseSignUpModel implements SimpleSignUpModel {
+public class BaseSignUpModel implements SimpleSignUpModel
+{
 
 	/**
 	 * The Constant serialVersionUID.

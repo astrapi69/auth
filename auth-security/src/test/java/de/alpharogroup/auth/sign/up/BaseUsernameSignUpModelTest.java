@@ -44,7 +44,8 @@ public class BaseUsernameSignUpModelTest
 	 * Test method for {@link BaseUsernameSignUpModel} constructors and builders
 	 */
 	@Test
-	public final void testConstructors() {
+	public final void testConstructors()
+	{
 		BaseUsernameSignUpModel model = new BaseUsernameSignUpModel();
 		assertNotNull(model);
 		model.setEmail("foo@bar.org");
@@ -64,8 +65,8 @@ public class BaseUsernameSignUpModelTest
 		assertTrue(model.getRepeatPassword().equals("secret"));
 		assertTrue(model.isTermOfUseAccepted() == true);
 		assertTrue(model.getUsername().equals("jim"));
-		model = BaseUsernameSignUpModel.builder().email("foo@bar.org").password("secret").repeatPassword("secret")
-				.termOfUseAccepted(true).username("jim").build();
+		model = BaseUsernameSignUpModel.builder().email("foo@bar.org").password("secret")
+			.repeatPassword("secret").termOfUseAccepted(true).username("jim").build();
 		assertNotNull(model);
 		assertTrue(model.getEmail().equals("foo@bar.org"));
 		assertTrue(model.getPassword().equals("secret"));
@@ -78,22 +79,25 @@ public class BaseUsernameSignUpModelTest
 	 * Test method for {@link BaseUsernameSignUpModel#equals(Object)} ,
 	 * {@link BaseUsernameSignUpModel#hashCode()} and {@link BaseUsernameSignUpModel#toString()}
 	 *
-	 * @throws IllegalAccessException    if the caller does not have access to the
-	 *                                   property accessor method
-	 * @throws InstantiationException    if a new instance of the bean's class
-	 *                                   cannot be instantiated
-	 * @throws InvocationTargetException if the property accessor method throws an
-	 *                                   exception
-	 * @throws NoSuchMethodException     if an accessor method for this property
-	 *                                   cannot be found
-	 * @throws IOException               Signals that an I/O exception has occurred
+	 * @throws IllegalAccessException
+	 *             if the caller does not have access to the property accessor method
+	 * @throws InstantiationException
+	 *             if a new instance of the bean's class cannot be instantiated
+	 * @throws InvocationTargetException
+	 *             if the property accessor method throws an exception
+	 * @throws NoSuchMethodException
+	 *             if an accessor method for this property cannot be found
+	 * @throws IOException
+	 *             Signals that an I/O exception has occurred
 	 */
 	@Test
-	public void testEqualsHashcodeAndToStringWithClass() throws NoSuchMethodException, IllegalAccessException,
-			InvocationTargetException, InstantiationException, IOException {
+	public void testEqualsHashcodeAndToStringWithClass() throws NoSuchMethodException,
+		IllegalAccessException, InvocationTargetException, InstantiationException, IOException
+	{
 		Optional<ContractViolation> expected;
 		Optional<ContractViolation> actual;
-		actual = EqualsHashCodeAndToStringCheck.equalsHashcodeAndToString(BaseUsernameSignUpModel.class);
+		actual = EqualsHashCodeAndToStringCheck
+			.equalsHashcodeAndToString(BaseUsernameSignUpModel.class);
 		expected = Optional.empty();
 		assertEquals(expected, actual);
 	}

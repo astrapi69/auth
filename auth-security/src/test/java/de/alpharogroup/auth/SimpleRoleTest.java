@@ -116,7 +116,7 @@ public class SimpleRoleTest
 		final boolean result = expected.equals(compare);
 		assertTrue(result);
 	}
-	
+
 	/**
 	 * Test method for {@link SimpleRole}
 	 */
