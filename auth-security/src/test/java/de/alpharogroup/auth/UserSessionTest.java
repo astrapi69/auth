@@ -20,6 +20,7 @@
  */
 package de.alpharogroup.auth;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.AssertJUnit.assertNotNull;
 
 import java.io.File;
@@ -86,7 +87,6 @@ public class UserSessionTest
 	@BeforeMethod
 	protected void setUp() throws Exception
 	{
-
 		final File srctestresDir = PathFinder.getSrcTestResourcesDir();
 		final File resources = new File(srctestresDir, "resources");
 		final File userrole = new File(resources, "userrole");
@@ -132,14 +132,23 @@ public class UserSessionTest
 	@AfterMethod
 	protected void tearDown() throws Exception
 	{
+		testsession = null;
 	}
 
-
+	/**
+	 * Test method for {@link UserSession} constructor
+	 */
 	@Test
-	public void testUserSessionConstructor()
+	public void testConstructors()
 	{
+		String expected;
+		String actual;
 		testsession = new UserSession(testuser);
 		assertNotNull(testsession);
+		testsession.setAttribute("foo", "bar");
+		actual = testsession.getAttributte("foo");
+		expected = "bar";
+		assertEquals(expected, actual);
 	}
 
 	@Test(expectedExceptions = IllegalArgumentException.class)
