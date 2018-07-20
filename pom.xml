@@ -11,7 +11,7 @@
 	</parent>
 
 	<artifactId>auth</artifactId>
-	<version>5.2-SNAPSHOT</version>
+	<version>5.2</version>
 	<packaging>pom</packaging>
 	<inceptionYear>2015</inceptionYear>
 
@@ -25,13 +25,9 @@
 
 	<properties>
 		<!-- NEW EXTENSIONS LIB versions -->
-		<file-worker.version>4.22</file-worker.version> <!-- V -->
-		<jcommons-lang.version>4.34</jcommons-lang.version>
-		<test-objects.version>4.28</test-objects.version><!-- V -->
-		<silly-collections.version>4.31</silly-collections.version><!-- V -->
-		<vintage-time.version>4.12</vintage-time.version>
-		<!-- RESOURCEBUNDLE-CORE versions -->
-		<resourcebundle-inspector.version>2.22</resourcebundle-inspector.version>
+		<file-worker.version>4.22</file-worker.version> 
+		<test-objects.version>4.28</test-objects.version>
+		<silly-collections.version>4.31</silly-collections.version>
 		<!-- JOBJECT-EXTENSIONS versions -->
 		<jobject-extensions.version>1.12</jobject-extensions.version>
 		<jobject-evaluate.version>${jobject-extensions.version}</jobject-evaluate.version>
@@ -41,7 +37,7 @@
 		<auth-api.version>${auth.version}</auth-api.version>
 		<!-- RANDOMIZER versions -->
 		<randomizer.version>5.4</randomizer.version>
-		<randomizer-core.version>${randomizer.version}</randomizer-core.version><!-- V -->
+		<randomizer-core.version>${randomizer.version}</randomizer-core.version>
 	</properties>
 
 	<modules>
@@ -94,12 +90,6 @@
 				<groupId>de.alpharogroup</groupId>
 				<artifactId>file-worker</artifactId>
 				<version>${file-worker.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>de.alpharogroup</groupId>
-				<artifactId>vintage-time</artifactId>
-				<version>${vintage-time.version}</version>
 			</dependency>
 
 			<dependency>
@@ -209,10 +199,6 @@
 								<!-- explicit abstract classes -->
 								<!-- explicit annotations -->
 								<!-- explicit bean classes -->
-								<exclude>de/alpharogroup/auth/Credentials.class</exclude>
-								<exclude>de/alpharogroup/auth/SimplePermission.class</exclude>
-								<exclude>de/alpharogroup/auth/SimpleRole.class</exclude>
-								<exclude>de/alpharogroup/auth/SimpleUser.class</exclude>
 								<!-- explicit deprecated classes -->
 								<!-- explicit interfaces -->
 								<!-- explicit constant classes with only constants -->

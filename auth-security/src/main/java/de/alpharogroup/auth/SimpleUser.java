@@ -29,6 +29,7 @@ import java.util.Set;
 import de.alpharogroup.auth.api.Permission;
 import de.alpharogroup.auth.api.Role;
 import de.alpharogroup.auth.api.User;
+import de.alpharogroup.collections.set.SetFactory;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
@@ -82,6 +83,10 @@ public class SimpleUser implements User<Permission, Role<Permission>>
 	@Override
 	public void addRole(final Role<Permission> role)
 	{
+		if (this.roles == null)
+		{
+			this.roles = SetFactory.newLinkedHashSet();
+		}
 		this.roles.add(role);
 	}
 

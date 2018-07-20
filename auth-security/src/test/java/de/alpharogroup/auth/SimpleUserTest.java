@@ -24,11 +24,17 @@
  */
 package de.alpharogroup.auth;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
+import static org.testng.AssertJUnit.assertNotNull;
 
 import java.io.File;
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 import org.meanbean.test.BeanTester;
@@ -40,6 +46,8 @@ import de.alpharogroup.auth.api.Permission;
 import de.alpharogroup.auth.api.Role;
 import de.alpharogroup.auth.api.User;
 import de.alpharogroup.collections.set.SetFactory;
+import de.alpharogroup.evaluate.object.api.ContractViolation;
+import de.alpharogroup.evaluate.object.checkers.EqualsHashCodeAndToStringCheck;
 import de.alpharogroup.file.csv.CsvFileExtensions;
 import de.alpharogroup.file.search.PathFinder;
 
@@ -121,6 +129,51 @@ public class SimpleUserTest
 	@AfterMethod
 	protected void tearDown() throws Exception
 	{
+		this.testuser = null;
+	}
+
+	/**
+	 * Test method for {@link SimpleUser} constructor
+	 */
+	@Test
+	public void testConstructors()
+	{
+		SimpleUser user = new SimpleUser();
+		assertNotNull(user);
+		user.addRole(testrole);
+		assertTrue(user.getRoles().contains(testrole));
+		user.removeRole(testrole);
+		assertFalse(user.getRoles().contains(testrole));
+		user.setActive(true);
+		assertTrue(user.isActive());
+		user.setLocked(true);
+		assertTrue(user.isLocked());
+	}
+
+	/**
+	 * Test method for {@link SimpleUser#equals(Object)} , {@link SimpleUser#hashCode()} and
+	 * {@link SimpleUser#toString()}
+	 *
+	 * @throws IllegalAccessException
+	 *             if the caller does not have access to the property accessor method
+	 * @throws InstantiationException
+	 *             if a new instance of the bean's class cannot be instantiated
+	 * @throws InvocationTargetException
+	 *             if the property accessor method throws an exception
+	 * @throws NoSuchMethodException
+	 *             if an accessor method for this property cannot be found
+	 * @throws IOException
+	 *             Signals that an I/O exception has occurred
+	 */
+	@Test
+	public void testEqualsHashcodeAndToStringWithClass() throws NoSuchMethodException,
+		IllegalAccessException, InvocationTargetException, InstantiationException, IOException
+	{
+		Optional<ContractViolation> expected;
+		Optional<ContractViolation> actual;
+		actual = EqualsHashCodeAndToStringCheck.equalsHashcodeAndToString(SimpleUser.class);
+		expected = Optional.empty();
+		assertEquals(expected, actual);
 	}
 
 	/**

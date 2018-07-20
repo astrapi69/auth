@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>de.alpharogroup</groupId>
 		<artifactId>auth</artifactId>
-		<version>5.2-SNAPSHOT</version>
+		<version>5.2</version>
 	</parent>
 
 	<artifactId>auth-security</artifactId>
