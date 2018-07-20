@@ -1,12 +1,13 @@
 ## Change log
 ----------------------
 
-Version 5.2-SNAPSHOT
+Version 5.2
 -------------
 
 ADDED
 
 - moved all related project modules from mystic-crypt project to this project
+- unit tests extended for improve code coverage
 
 -------------
 

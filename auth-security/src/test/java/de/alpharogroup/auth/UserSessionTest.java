@@ -3,23 +3,28 @@
  *
  * Copyright (C) 2015 Asterios Raptis
  *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
- * associated documentation files (the "Software"), to deal in the Software without restriction,
- * including without limitation the rights to use, copy, modify, merge, publish, distribute,
- * sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
+ * Permission is hereby granted, free of charge, to any person obtaining
+ * a copy of this software and associated documentation files (the
+ * "Software"), to deal in the Software without restriction, including
+ * without limitation the rights to use, copy, modify, merge, publish,
+ * distribute, sublicense, and/or sell copies of the Software, and to
+ * permit persons to whom the Software is furnished to do so, subject to
+ * the following conditions:
  *
- * The above copyright notice and this permission notice shall be included in all copies or
- * substantial portions of the Software.
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
  *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
- * NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
- * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+ * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+ * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+ * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 package de.alpharogroup.auth;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.AssertJUnit.assertNotNull;
 
 import java.io.File;
@@ -53,17 +58,17 @@ import de.alpharogroup.meanbean.factories.LocaleFactory;
 public class UserSessionTest
 {
 
-	/** The testsession. */
-	Session<String, String> testsession;
-
-	/** The testuser. */
-	User<Permission, Role<Permission>> testuser;
-
 	/** The accessrights1. */
 	List<String> accessrights1;
 
 	/** The accessrights2. */
 	List<String> accessrights2;
+
+	/** The ars. */
+	Set<Permission> ars;
+
+	/** The ars2. */
+	Set<Permission> ars2;
 
 	/** The testrole. */
 	Role<Permission> testrole;
@@ -71,11 +76,11 @@ public class UserSessionTest
 	/** The testrole2. */
 	Role<Permission> testrole2;
 
-	/** The ars. */
-	Set<Permission> ars;
+	/** The testsession. */
+	Session<String, String> testsession;
 
-	/** The ars2. */
-	Set<Permission> ars2;
+	/** The testuser. */
+	User<Permission, Role<Permission>> testuser;
 
 	/**
 	 * Sets up method will be invoked before every unit test method in this class.
@@ -86,7 +91,6 @@ public class UserSessionTest
 	@BeforeMethod
 	protected void setUp() throws Exception
 	{
-
 		final File srctestresDir = PathFinder.getSrcTestResourcesDir();
 		final File resources = new File(srctestresDir, "resources");
 		final File userrole = new File(resources, "userrole");
@@ -132,14 +136,23 @@ public class UserSessionTest
 	@AfterMethod
 	protected void tearDown() throws Exception
 	{
+		testsession = null;
 	}
 
-
+	/**
+	 * Test method for {@link UserSession} constructor
+	 */
 	@Test
-	public void testUserSessionConstructor()
+	public void testConstructors()
 	{
+		String expected;
+		String actual;
 		testsession = new UserSession(testuser);
 		assertNotNull(testsession);
+		testsession.setAttribute("foo", "bar");
+		actual = testsession.getAttributte("foo");
+		expected = "bar";
+		assertEquals(expected, actual);
 	}
 
 	@Test(expectedExceptions = IllegalArgumentException.class)
