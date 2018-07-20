@@ -46,6 +46,14 @@ public class BaseSignUpModelTest {
 	public final void testConstructors() {
 		BaseSignUpModel model = new BaseSignUpModel();
 		assertNotNull(model);
+		model.setEmail("foo@bar.org");
+		model.setPassword("secret");
+		model.setRepeatPassword("secret");
+		model.setTermOfUseAccepted(true);
+		assertTrue(model.getEmail().equals("foo@bar.org"));
+		assertTrue(model.getPassword().equals("secret"));
+		assertTrue(model.getRepeatPassword().equals("secret"));
+		assertTrue(model.isTermOfUseAccepted() == true);
 		model = new BaseSignUpModel("foo@bar.org", "secret", "secret", true);
 		assertNotNull(model);
 		assertTrue(model.getEmail().equals("foo@bar.org"));
@@ -64,7 +72,7 @@ public class BaseSignUpModelTest {
 	/**
 	 * Test method for {@link BaseSignUpModel#equals(Object)} ,
 	 * {@link BaseSignUpModel#hashCode()} and {@link BaseSignUpModel#toString()}
-	 * 
+	 *
 	 * @throws IllegalAccessException    if the caller does not have access to the
 	 *                                   property accessor method
 	 * @throws InstantiationException    if a new instance of the bean's class
