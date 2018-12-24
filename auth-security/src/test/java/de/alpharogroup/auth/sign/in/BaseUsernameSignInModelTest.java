@@ -68,7 +68,7 @@ public class BaseUsernameSignInModelTest
 	/**
 	 * Test method for {@link BaseUsernameSignInModel#equals(Object)} ,
 	 * {@link BaseUsernameSignInModel#hashCode()} and {@link BaseUsernameSignInModel#toString()}
-	 * 
+	 *
 	 * @throws IllegalAccessException
 	 *             if the caller does not have access to the property accessor method
 	 * @throws InstantiationException
@@ -79,10 +79,13 @@ public class BaseUsernameSignInModelTest
 	 *             if an accessor method for this property cannot be found
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred
+	 * @throws ClassNotFoundException
+	 *             occurs if a given class cannot be located by the specified class loader
 	 */
 	@Test
-	public void testEqualsHashcodeAndToStringWithClass() throws NoSuchMethodException,
-		IllegalAccessException, InvocationTargetException, InstantiationException, IOException
+	public void testEqualsHashcodeAndToStringWithClass()
+		throws NoSuchMethodException, IllegalAccessException, InvocationTargetException,
+		InstantiationException, IOException, ClassNotFoundException
 	{
 		Optional<ContractViolation> expected;
 		Optional<ContractViolation> actual;
