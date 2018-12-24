@@ -32,7 +32,7 @@ You can first define the version properties:
 	<properties>
 			...
 		<!-- AUTH versions -->
-		<auth.version>5.2</auth.version>
+		<auth.version>5.2.1</auth.version>
 		<auth-api.version>${auth.version}</auth-api.version>
 		<auth-security.version>${auth.version}</auth-security.version>
 			...
