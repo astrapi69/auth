@@ -2,8 +2,8 @@
 
 <div align="center">
 
-[![Build Status](https://travis-ci.org/astrapi69/auth.svg?branch=develop)](https://travis-ci.org/astrapi69/auth) 
-[![Coverage Status](https://coveralls.io/repos/github/astrapi69/auth/badge.svg?branch=develop)](https://coveralls.io/github/astrapi69/auth?branch=develop) 
+[![Build Status](https://travis-ci.org/astrapi69/auth.svg?branch=master)](https://travis-ci.org/astrapi69/auth) 
+[![Coverage Status](https://coveralls.io/repos/github/astrapi69/auth/badge.svg?branch=master)](https://coveralls.io/github/astrapi69/auth?branch=master) 
 [![Open Issues](https://img.shields.io/github/issues/astrapi69/auth.svg?style=flat)](https://github.com/astrapi69/auth/issues) 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.alpharogroup/auth/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.alpharogroup/auth)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](http://opensource.org/licenses/MIT)
@@ -45,7 +45,7 @@ The source code comes under the liberal MIT License, making auth project great f
 
 [![Javadoc](http://www.javadoc.io/badge/de.alpharogroup/auth-api.svg)](http://www.javadoc.io/doc/de.alpharogroup/auth-api) auth-api
 
-[![Javadoc](http://www.javadoc.io/badge/de.alpharogroup/auth-security.svg)](http://www.javadoc.io/doc/de.alpharogroup/auth-security) auth-security
+[![Javadoc](http://www.javadoc.io/badge/de.alpharogroup/auth.svg)](http://www.javadoc.io/doc/de.alpharogroup/auth) auth
 
 ## Maven dependency
 
@@ -63,7 +63,7 @@ You can first define the version properties:
 		...
 		<dependencies>
 			...
-			<!-- auth DEPENDENCY -->
+			<!-- AUTH DEPENDENCY -->
 			<dependency>
 				<groupId>de.alpharogroup</groupId>
 				<artifactId>auth</artifactId>
@@ -108,27 +108,25 @@ Here is a list of awesome projects:
 |**Travis CI**|
 |     :---:      |
 |[![Travis CI](https://travis-ci.com/images/logos/TravisCI-Full-Color.png)]|
-|[![Build Status](https://travis-ci.org/astrapi69/auth.svg?branch=develop)](https://travis-ci.org/astrapi69/auth)|
+|[![Build Status](https://travis-ci.org/astrapi69/auth.svg?branch=master)](https://travis-ci.org/astrapi69/auth)|
 |Special thanks to [Travis CI](https://travis-ci.org) for providing a free continuous integration service for open source projects|
 |     <img width=1000/>     |
 
 |**Nexus Sonatype repositories**|
 |     :---:      |
-|[![sonatype repository](https://img.shields.io/nexus/r/https/oss.sonatype.org/de.alpharogroup/auth-api.svg?style=for-the-badge)](https://oss.sonatype.org/index.html#nexus-search;gav~de.alpharogroup~auth-api~~~) auth-api|
-|[![sonatype repository](https://img.shields.io/nexus/r/https/oss.sonatype.org/de.alpharogroup/auth-security.svg?style=for-the-badge)](https://oss.sonatype.org/index.html#nexus-search;gav~de.alpharogroup~auth-security~~~) auth-security|
+|[![sonatype repository](https://img.shields.io/nexus/r/https/oss.sonatype.org/de.alpharogroup/auth.svg?style=for-the-badge)](https://oss.sonatype.org/index.html#nexus-search;gav~de.alpharogroup~auth~~~) auth|
 |Special thanks to [sonatype repository](https://www.sonatype.com) for providing a free maven repository service for open source projects|
 |     <img width=1000/>     |
 
 |**coveralls.io**|
 |     :---:      |
-|[![Coverage Status](https://coveralls.io/repos/github/astrapi69/auth/badge.svg?branch=develop)](https://coveralls.io/github/astrapi69/auth?branch=develop)|
+|[![Coverage Status](https://coveralls.io/repos/github/astrapi69/auth/badge.svg?branch=master)](https://coveralls.io/github/astrapi69/auth?branch=master)|
 |Special thanks to [coveralls.io](https://coveralls.io) for providing a free code coverage for open source projects|
 |     <img width=1000/>     |
 
 |**javadoc.io**|
 |     :---:      |
-|[![Javadoc](http://www.javadoc.io/badge/de.alpharogroup/auth-api.svg)](http://www.javadoc.io/doc/de.alpharogroup/auth-api) auth-api|
-|[![Javadoc](http://www.javadoc.io/badge/de.alpharogroup/auth-security.svg)](http://www.javadoc.io/doc/de.alpharogroup/auth-security) auth-security|
+|[![Javadoc](http://www.javadoc.io/badge/de.alpharogroup/auth.svg)](http://www.javadoc.io/doc/de.alpharogroup/auth) auth|
 |Special thanks to [javadoc.io](http://www.javadoc.io) for providing a free javadoc documentation for open source projects|
 |     <img width=1000/>     |
 
