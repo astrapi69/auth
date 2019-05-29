@@ -29,10 +29,10 @@ import static org.testng.AssertJUnit.assertTrue;
 import org.meanbean.test.BeanTester;
 import org.testng.annotations.Test;
 
-import de.alpharogroup.evaluate.object.verifier.ContractVerifier;
 import de.alpharogroup.evaluate.object.evaluators.EqualsEvaluator;
 import de.alpharogroup.evaluate.object.evaluators.HashcodeEvaluator;
 import de.alpharogroup.evaluate.object.evaluators.ToStringEvaluator;
+import de.alpharogroup.evaluate.object.verifier.ContractVerifier;
 
 /**
  * The unit test class for the class {@link Credentials}

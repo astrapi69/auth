@@ -35,9 +35,9 @@ import java.util.Optional;
 import org.meanbean.test.BeanTester;
 import org.testng.annotations.Test;
 
-import de.alpharogroup.evaluate.object.verifier.ContractVerifier;
 import de.alpharogroup.evaluate.object.api.ContractViolation;
 import de.alpharogroup.evaluate.object.checkers.EqualsHashCodeAndToStringCheck;
+import de.alpharogroup.evaluate.object.verifier.ContractVerifier;
 
 /**
  * The unit test class for the class {@link BaseUsernameSignUpModel}
@@ -101,8 +101,9 @@ public class BaseUsernameSignUpModelTest
 	 */
 	@Test
 	public void testEqualsHashcodeAndToStringWithClass()
-			throws NoSuchMethodException, IllegalAccessException, InvocationTargetException,
-			InstantiationException, IOException, ClassNotFoundException, NoSuchFieldException {
+		throws NoSuchMethodException, IllegalAccessException, InvocationTargetException,
+		InstantiationException, IOException, ClassNotFoundException, NoSuchFieldException
+	{
 		Optional<ContractViolation> expected;
 		Optional<ContractViolation> actual;
 		actual = EqualsHashCodeAndToStringCheck
