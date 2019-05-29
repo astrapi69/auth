@@ -38,6 +38,7 @@ import org.testng.annotations.Test;
 
 import de.alpharogroup.auth.api.Session;
 import de.alpharogroup.auth.api.SessionContext;
+import de.alpharogroup.evaluate.object.verifier.ContractVerifier;
 import de.alpharogroup.file.csv.CsvFileExtensions;
 import de.alpharogroup.file.search.PathFinder;
 import de.alpharogroup.random.RandomObjectsExtensions;
@@ -136,6 +137,16 @@ public class UserSessionContextTest
 	{
 		final BeanTester beanTester = new BeanTester();
 		beanTester.testBean(UserSessionContext.class);
+	}
+
+	/**
+	 * Test method for {@link UserSessionContext#equals(Object)},
+	 * {@link UserSessionContext#hashCode()} and {@link UserSessionContext#toString()}
+	 */
+	@Test
+	public void verifyEqualsHashcodeAndToStringContracts()
+	{
+		ContractVerifier.of(UserSessionContext.class).verify();
 	}
 
 }

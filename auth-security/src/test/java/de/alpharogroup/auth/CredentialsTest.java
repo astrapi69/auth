@@ -24,42 +24,16 @@
  */
 package de.alpharogroup.auth;
 
-import static org.testng.AssertJUnit.assertTrue;
-
 import org.meanbean.test.BeanTester;
 import org.testng.annotations.Test;
 
-import de.alpharogroup.evaluate.object.evaluators.EqualsEvaluator;
-import de.alpharogroup.evaluate.object.evaluators.HashcodeEvaluator;
-import de.alpharogroup.evaluate.object.evaluators.ToStringEvaluator;
+import de.alpharogroup.evaluate.object.verifier.ContractVerifier;
 
 /**
  * The unit test class for the class {@link Credentials}
  */
 public class CredentialsTest
 {
-
-
-	/**
-	 * Test method for {@link Credentials#equals(Object)} , {@link Credentials#hashCode()} and
-	 * {@link Credentials#toString()}
-	 */
-	@Test
-	public void testCredentials()
-	{
-		Credentials expected;
-		Credentials actual;
-		expected = Credentials.builder().build();
-		actual = Credentials.builder().build();
-		assertTrue(HashcodeEvaluator.evaluateEquality(expected, actual));
-		assertTrue(ToStringEvaluator.evaluate(Credentials.class));
-		assertTrue(ToStringEvaluator.evaluateConsistency(actual));
-
-		actual = Credentials.builder().username("john").build();
-		assertTrue(HashcodeEvaluator.evaluateUnequality(expected, actual));
-
-		assertTrue(EqualsEvaluator.evaluateConsistency(expected, actual));
-	}
 
 	/**
 	 * Test method for {@link Credentials}
@@ -69,6 +43,16 @@ public class CredentialsTest
 	{
 		final BeanTester beanTester = new BeanTester();
 		beanTester.testBean(Credentials.class);
+	}
+
+	/**
+	 * Test method for {@link Credentials#equals(Object)} , {@link Credentials#hashCode()} and
+	 * {@link Credentials#toString()}
+	 */
+	@Test
+	public void verifyEqualsHashcodeAndToStringContracts()
+	{
+		ContractVerifier.of(Credentials.class).verify();
 	}
 
 }

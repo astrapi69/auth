@@ -36,6 +36,7 @@ import org.testng.annotations.Test;
 
 import de.alpharogroup.BaseTestCase;
 import de.alpharogroup.auth.api.Permission;
+import de.alpharogroup.evaluate.object.verifier.ContractVerifier;
 import de.alpharogroup.file.csv.CsvFileExtensions;
 import de.alpharogroup.file.search.PathFinder;
 
@@ -121,6 +122,16 @@ public class SimplePermissionTest extends BaseTestCase
 	{
 		final BeanTester beanTester = new BeanTester();
 		beanTester.testBean(SimplePermission.class);
+	}
+
+	/**
+	 * Test method for {@link SimplePermission#equals(Object)} , {@link SimplePermission#hashCode()}
+	 * and {@link SimplePermission#toString()}
+	 */
+	@Test
+	public void verifyEqualsHashcodeAndToStringContracts()
+	{
+		ContractVerifier.of(SimplePermission.class).verify();
 	}
 
 }

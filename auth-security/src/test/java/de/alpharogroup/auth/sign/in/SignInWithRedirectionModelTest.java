@@ -72,7 +72,7 @@ public class SignInWithRedirectionModelTest
 	 * Test method for {@link SignInWithRedirectionModel#equals(Object)} ,
 	 * {@link SignInWithRedirectionModel#hashCode()} and
 	 * {@link SignInWithRedirectionModel#toString()}
-	 * 
+	 *
 	 * @throws IllegalAccessException
 	 *             if the caller does not have access to the property accessor method
 	 * @throws InstantiationException

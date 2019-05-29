@@ -26,17 +26,11 @@ package de.alpharogroup.auth.sign.in;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
-import static org.testng.Assert.assertEquals;
-
-import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
-import java.util.Optional;
 
 import org.meanbean.test.BeanTester;
 import org.testng.annotations.Test;
 
-import de.alpharogroup.evaluate.object.api.ContractViolation;
-import de.alpharogroup.evaluate.object.checkers.EqualsHashCodeAndToStringCheck;
+import de.alpharogroup.evaluate.object.verifier.ContractVerifier;
 
 /**
  * The unit test class for the class {@link BaseUsernameSignInModel}
@@ -66,33 +60,6 @@ public class BaseUsernameSignInModelTest
 	}
 
 	/**
-	 * Test method for {@link BaseUsernameSignInModel#equals(Object)} ,
-	 * {@link BaseUsernameSignInModel#hashCode()} and {@link BaseUsernameSignInModel#toString()}
-	 * 
-	 * @throws IllegalAccessException
-	 *             if the caller does not have access to the property accessor method
-	 * @throws InstantiationException
-	 *             if a new instance of the bean's class cannot be instantiated
-	 * @throws InvocationTargetException
-	 *             if the property accessor method throws an exception
-	 * @throws NoSuchMethodException
-	 *             if an accessor method for this property cannot be found
-	 * @throws IOException
-	 *             Signals that an I/O exception has occurred
-	 */
-	@Test
-	public void testEqualsHashcodeAndToStringWithClass() throws NoSuchMethodException,
-		IllegalAccessException, InvocationTargetException, InstantiationException, IOException
-	{
-		Optional<ContractViolation> expected;
-		Optional<ContractViolation> actual;
-		actual = EqualsHashCodeAndToStringCheck
-			.equalsHashcodeAndToString(BaseUsernameSignInModel.class);
-		expected = Optional.empty();
-		assertEquals(expected, actual);
-	}
-
-	/**
 	 * Test method for {@link BaseUsernameSignInModel}
 	 */
 	@Test
@@ -100,5 +67,15 @@ public class BaseUsernameSignInModelTest
 	{
 		final BeanTester beanTester = new BeanTester();
 		beanTester.testBean(BaseUsernameSignInModel.class);
+	}
+
+	/**
+	 * Test method for {@link BaseUsernameSignInModel#equals(Object)} ,
+	 * {@link BaseUsernameSignInModel#hashCode()} and {@link BaseUsernameSignInModel#toString()}
+	 */
+	@Test
+	public void verifyEqualsHashcodeAndToStringContracts()
+	{
+		ContractVerifier.of(BaseUsernameSignInModel.class).verify();
 	}
 }

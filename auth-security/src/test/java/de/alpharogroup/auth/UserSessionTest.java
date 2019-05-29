@@ -183,7 +183,6 @@ public class UserSessionTest
 		final BeanTester beanTester = new BeanTester();
 		beanTester.addCustomConfiguration(UserSession.class, configuration);
 		beanTester.testBean(UserSession.class);
-
 	}
 
 }

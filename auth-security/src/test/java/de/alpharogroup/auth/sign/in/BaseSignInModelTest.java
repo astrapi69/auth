@@ -24,41 +24,16 @@
  */
 package de.alpharogroup.auth.sign.in;
 
-import static org.testng.AssertJUnit.assertEquals;
-
 import org.meanbean.test.BeanTester;
 import org.testng.annotations.Test;
 
-import de.alpharogroup.evaluate.object.evaluators.EqualsHashCodeAndToStringEvaluator;
+import de.alpharogroup.evaluate.object.verifier.ContractVerifier;
 
 /**
  * The unit test class for the class {@link BaseSignInModel}
  */
 public class BaseSignInModelTest
 {
-
-	/**
-	 * Test method for {@link BaseSignInModel#equals(Object)} , {@link BaseSignInModel#hashCode()}
-	 * and {@link BaseSignInModel#toString()}
-	 */
-	@Test
-	public void testEqualsHashcodeAndToString()
-	{
-
-		boolean expected;
-		boolean actual;
-		final BaseSignInModel first = BaseSignInModel.builder().email("foo@bar.org")
-			.password("secret").build();
-		final BaseSignInModel second = new BaseSignInModel();
-		final BaseSignInModel third = new BaseSignInModel("foo@bar.org", "secret");
-		final BaseSignInModel fourth = BaseSignInModel.builder().email("foo@bar.org")
-			.password("secret").build();
-
-		actual = EqualsHashCodeAndToStringEvaluator.evaluateEqualsHashcodeAndToString(first, second,
-			third, fourth);
-		expected = true;
-		assertEquals(expected, actual);
-	}
 
 	/**
 	 * Test method for {@link BaseSignInModel}
@@ -68,6 +43,16 @@ public class BaseSignInModelTest
 	{
 		final BeanTester beanTester = new BeanTester();
 		beanTester.testBean(BaseSignInModel.class);
+	}
+
+	/**
+	 * Test method for {@link BaseSignInModel#equals(Object)} , {@link BaseSignInModel#hashCode()}
+	 * and {@link BaseSignInModel#toString()}
+	 */
+	@Test
+	public void verifyEqualsHashcodeAndToStringContracts()
+	{
+		ContractVerifier.of(BaseSignInModel.class).verify();
 	}
 
 }
