@@ -12,7 +12,7 @@
 	</parent>
 
 	<artifactId>auth</artifactId>
-	<version>5.3</version>
+	<version>5.4-SNAPSHOT</version>
 	<packaging>jar</packaging>
     <inceptionYear>2015</inceptionYear>
 
@@ -25,9 +25,8 @@
 	<url>https://github.com/astrapi69/auth</url>
 
 	<properties>
-		<!-- AUTH versions -->
-		<auth.version>${project.version}</auth.version>
-		<auth-api.version>${auth.version}</auth-api.version>
+		<!-- AUTH-API version -->
+		<auth-api.version>5.3</auth-api.version>
 		<!-- NEW EXTENSIONS LIB versions -->
 		<file-worker.version>5.2</file-worker.version> 
 		<test-objects.version>5.2</test-objects.version>
