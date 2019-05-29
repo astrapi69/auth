@@ -1,6 +1,13 @@
 ## Change log
 ----------------------
 
+Version 5.3.1
+-------------
+
+CHANGED:
+
+- update of auth-api version
+
 Version 5.3
 -------------
 
