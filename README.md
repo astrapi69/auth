@@ -10,7 +10,7 @@
 [![Donate](https://img.shields.io/badge/donate-❤-ff2244.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GVBTWLRAZ7HB8)
 </div>
 
-The project auth contains a few simple modules like authorisation and authentication
+The project auth contains a few simple modules like authorization and authentication
 
 If you like this project put a ⭐ and donate
 
