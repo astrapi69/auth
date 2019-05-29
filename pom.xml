@@ -1,74 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
 		<groupId>de.alpharogroup</groupId>
 		<artifactId>mvn-java-parent</artifactId>
-		<version>4</version>
+		<version>5</version>
 		<relativePath></relativePath>
 	</parent>
 
 	<artifactId>auth</artifactId>
-	<version>5.2</version>
-	<packaging>pom</packaging>
-	<inceptionYear>2015</inceptionYear>
+	<version>5.3</version>
+	<packaging>jar</packaging>
+    <inceptionYear>2015</inceptionYear>
 
 	<name>${project.artifactId}</name>
 
 	<description>
-		The target of this parent project provides a few simple modules like authorisation and authentication
-	</description>
+		The project auth contains simple modules for authorisation and authentication
+    </description>
 
 	<url>https://github.com/astrapi69/auth</url>
 
 	<properties>
-		<!-- NEW EXTENSIONS LIB versions -->
-		<file-worker.version>4.22</file-worker.version> 
-		<test-objects.version>4.28</test-objects.version>
-		<silly-collections.version>4.31</silly-collections.version>
-		<!-- JOBJECT-EXTENSIONS versions -->
-		<jobject-extensions.version>1.12</jobject-extensions.version>
-		<jobject-evaluate.version>${jobject-extensions.version}</jobject-evaluate.version>
-		<!-- PARENT PROJECT versions -->
 		<!-- AUTH versions -->
 		<auth.version>${project.version}</auth.version>
 		<auth-api.version>${auth.version}</auth-api.version>
+		<!-- NEW EXTENSIONS LIB versions -->
+		<file-worker.version>5.2</file-worker.version> 
+		<test-objects.version>5.2</test-objects.version>
+		<silly-collections.version>5.2.1</silly-collections.version>
+		<!-- JOBJ-CONTRACT-VERIFIER version -->
+		<jobj-contract-verifier.version>3.2</jobj-contract-verifier.version>
 		<!-- RANDOMIZER versions -->
-		<randomizer.version>5.4</randomizer.version>
+		<randomizer.version>6.1</randomizer.version>
 		<randomizer-core.version>${randomizer.version}</randomizer-core.version>
 	</properties>
-
-	<modules>
-		<module>auth-api</module>
-		<module>auth-security</module>
-	</modules>
-
-	<developers>
-
-		<developer>
-			<id>astrapi69</id>
-			<name>Asterios Raptis</name>
-			<roles>
-				<role>Project manager</role>
-				<role>Developer</role>
-			</roles>
-			<timezone>Berlin</timezone>
-		</developer>
-
-	</developers>
+	
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 
 	<scm>
-		<connection>scm:git:git:@github.com:astrapi69/auth.git</connection>
-		<developerConnection>scm:git:git@github.com:astrapi69/auth.git</developerConnection>
-		<url>git:@github.com:astrapi69/auth.git</url>
+		<connection>scm:git:git:@github.com:astrapi69/${project.artifactId}.git</connection>
+		<developerConnection>scm:git:git@github.com:astrapi69/${project.artifactId}.git</developerConnection>
+		<url>git:@github.com:astrapi69/${project.artifactId}.git</url>
 	</scm>
 
 	<issueManagement>
-		<system>github.com</system>
-		<url>https://github.com/astrapi69/auth/issues</url>
+		<system>github</system>
+		<url>https://github.com/astrapi69/${project.artifactId}/issues</url>
 	</issueManagement>
+
+	<ciManagement>
+		<system>travis-ci</system>
+		<url>https://travis-ci.org/astrapi69/${project.artifactId}</url>
+	</ciManagement>	
 
 	<dependencyManagement>
 
@@ -104,140 +97,66 @@
 				<version>${randomizer-core.version}</version>
 			</dependency>
 
-			<!-- JOBJECT-EXTENSIONS DEPENDENCIES -->
-			<!-- JOBJECT-EVALUATE DEPENDENCY -->
+			<!-- TEST-SCOPE DEPENDENCIES -->
+			<!-- JOBJ-CONTRACT-VERIFIER DEPENDENCY -->
 			<dependency>
 				<groupId>de.alpharogroup</groupId>
-				<artifactId>jobject-evaluate</artifactId>
-				<version>${jobject-evaluate.version}</version>
+				<artifactId>jobj-contract-verifier</artifactId>
+				<version>${jobj-contract-verifier.version}</version>
 			</dependency>
 
 		</dependencies>
 
-	</dependencyManagement>
-	
+	</dependencyManagement>    
+
 	<dependencies>
-			<!-- JOBJECT-EVALUATE DEPENDENCY -->
-			<dependency>
-				<groupId>de.alpharogroup</groupId>
-				<artifactId>jobject-evaluate</artifactId>
-				<scope>test</scope>
-			</dependency>
-	
+
+		<dependency>
+			<groupId>de.alpharogroup</groupId>
+			<artifactId>auth-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>de.alpharogroup</groupId>
+			<artifactId>randomizer-core</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>de.alpharogroup</groupId>
+			<artifactId>silly-collections</artifactId>
+		</dependency>
+		<!-- TEST-SCOPE DEPENDENCIES -->
+		<!-- FILE-WORKER DEPENDENCY -->
+		<dependency>
+			<groupId>de.alpharogroup</groupId>
+			<artifactId>file-worker</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- JOBJ-CONTRACT-VERIFIER DEPENDENCY -->
+		<dependency>
+			<groupId>de.alpharogroup</groupId>
+			<artifactId>jobj-contract-verifier</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- TEST-OBJECTS DEPENDENCY -->
+		<dependency>
+			<groupId>de.alpharogroup</groupId>
+			<artifactId>test-objects</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- MEANBEAN DEPENDENCY -->
+		<dependency>
+			<groupId>org.meanbean</groupId>
+			<artifactId>meanbean</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- MEANBEAN-FACTORIES DEPENDENCY -->
+		<dependency>
+			<groupId>de.alpharogroup</groupId>
+			<artifactId>meanbean-factories</artifactId>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
-
-	<build>
-
-		<resources>
-
-			<resource>
-				<filtering>false</filtering>
-				<directory>src/main/java</directory>
-				<includes>
-					<include>**</include>
-				</includes>
-				<excludes>
-					<exclude>**/*.java</exclude>
-					<exclude>**/package.html</exclude>
-				</excludes>
-			</resource>
-
-			<resource>
-				<filtering>false</filtering>
-				<directory>src/main/resources</directory>
-			</resource>
-
-			<resource>
-				<filtering>false</filtering>
-				<directory>src/site</directory>
-			</resource>
-
-		</resources>
-
-		<testResources>
-
-			<testResource>
-				<filtering>false</filtering>
-				<directory>src/test/java</directory>
-				<includes>
-					<include>**</include>
-				</includes>
-				<excludes>
-					<exclude>**/*.java</exclude>
-					<exclude>**/package.html</exclude>
-				</excludes>
-			</testResource>
-			<testResource>
-				<filtering>false</filtering>
-				<directory>src/test/resources</directory>
-			</testResource>
-
-		</testResources>
-
-		<pluginManagement>
-
-			<plugins>
-
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>cobertura-maven-plugin</artifactId>
-					<configuration>
-						<instrumentation>
-							<excludes>
-								<!-- abstract classes -->
-								<!-- enums -->
-								<exclude>de/alpharogroup/auth/enums/**/*.class</exclude>
-								<!-- beans -->
-								<!-- constant classes with only constants -->
-								<!-- deprecated classes -->
-								<!-- interfaces -->
-								<exclude>de/alpharogroup/auth/api/**/*.class</exclude>
-								<exclude>de/alpharogroup/auth/usermanagement/**/*.class</exclude>
-								<!-- exceptions -->
-								<exclude>de/alpharogroup/auth/exceptions/**/*.class</exclude>
-								<!-- experimental classes -->
-								<!-- explicit abstract classes -->
-								<!-- explicit annotations -->
-								<!-- explicit bean classes -->
-								<!-- explicit deprecated classes -->
-								<!-- explicit interfaces -->
-								<!-- explicit constant classes with only constants -->
-								<!-- explicit delegation classes -->
-							</excludes>
-						</instrumentation>
-					</configuration>
-					<executions>
-						<execution>
-							<goals>
-								<goal>clean</goal>
-							</goals>
-						</execution>
-					</executions>
-				</plugin>
-
-			</plugins>
-
-		</pluginManagement>
-
-		<plugins>
-
-			<plugin>
-				<inherited>true</inherited>
-				<artifactId>maven-compiler-plugin</artifactId>
-			</plugin>
-
-			<plugin>
-				<inherited>true</inherited>
-				<artifactId>maven-source-plugin</artifactId>
-			</plugin>
-
-			<plugin>
-				<inherited>true</inherited>
-				<artifactId>maven-eclipse-plugin</artifactId>
-			</plugin>
-
-		</plugins>
-
-	</build>
 
 </project>
