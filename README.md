@@ -2,15 +2,15 @@
 
 <div align="center">
 
-[![Build Status](https://travis-ci.org/astrapi69/auth.svg?branch=master)](https://travis-ci.org/astrapi69/auth) 
-[![Coverage Status](https://coveralls.io/repos/github/astrapi69/auth/badge.svg?branch=develop)](https://coveralls.io/github/astrapi69/auth?branch=master) 
+[![Build Status](https://travis-ci.org/astrapi69/auth.svg?branch=develop)](https://travis-ci.org/astrapi69/auth) 
+[![Coverage Status](https://coveralls.io/repos/github/astrapi69/auth/badge.svg?branch=develop)](https://coveralls.io/github/astrapi69/auth?branch=develop) 
 [![Open Issues](https://img.shields.io/github/issues/astrapi69/auth.svg?style=flat)](https://github.com/astrapi69/auth/issues) 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.alpharogroup/auth/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.alpharogroup/auth)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](http://opensource.org/licenses/MIT)
 [![Donate](https://img.shields.io/badge/donate-❤-ff2244.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GVBTWLRAZ7HB8)
 </div>
 
-The project auth contains a few simple modules like authorization and authentication
+The project auth contains simple modules for authorization and authentication
 
 If you like this project put a ⭐ and donate
 
@@ -57,36 +57,17 @@ You can first define the version properties:
 	<properties>
 			...
 		<!-- AUTH versions -->
-		<auth.version>5.2.1</auth.version>
-		<auth-api.version>${auth.version}</auth-api.version>
-		<auth-security.version>${auth.version}</auth-security.version>
+		<auth.version>5.3</auth.version>
 			...
 	</properties>
-	
-You can add the following dependencies to your project for use the functionality of auth.
-
-Add the following maven dependency to your project `pom.xml` if you want to import the functionality of auth-api:
-
+		...
 		<dependencies>
 			...
 			<!-- auth DEPENDENCY -->
 			<dependency>
 				<groupId>de.alpharogroup</groupId>
-				<artifactId>auth-api</artifactId>
-				<version>${auth-api.version}</version>
-			</dependency>
-			...
-		</dependencies>
-
-Add the following maven dependency to your project `pom.xml` if you want to import the functionality of auth-security:
-
-		<dependencies>
-			...
-			<!-- auth DEPENDENCY -->
-			<dependency>
-				<groupId>de.alpharogroup</groupId>
-				<artifactId>auth-security</artifactId>
-				<version>${auth-security.version}</version>
+				<artifactId>auth</artifactId>
+				<version>${auth.version}</version>
 			</dependency>
 			...
 		</dependencies>

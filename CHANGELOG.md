@@ -1,18 +1,7 @@
 ## Change log
 ----------------------
 
-Version 5.3-SNAPSHOT
--------------
-
-CHANGED:
-
-- update of parent version to 4.5
-- update of dependency file-worker version to 5.0.1
-- update of dependency silly-collections version to 5
-- update of test-objects dependency version to 5
-- update of jobject-evaluate dependency version to 2.5
-
-Version 5.2.1
+Version 5.3
 -------------
 
 CHANGED:
@@ -23,6 +12,19 @@ CHANGED:
 - update of dependency silly-collections version to 5.2.1
 - update of randomizer-core dependency version to 6.1
 - replaced obsolet dependency jobject-evaluate with new dependency jobj-contract-verifier in version 3.2
+- moved auth-api to its own project
+- changed multi-module project auth to simple project
+
+Version 5.2.1
+-------------
+
+CHANGED:
+
+- update of parent version to 4.5
+- update of dependency file-worker version to 5.0.1
+- update of dependency silly-collections version to 5
+- update of test-objects dependency version to 5
+- update of jobject-evaluate dependency version to 2.5
 
 Version 5.2
 -------------
