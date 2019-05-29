@@ -43,8 +43,6 @@ The source code comes under the liberal MIT License, making auth project great f
 
 ## Javadoc
 
-[![Javadoc](http://www.javadoc.io/badge/de.alpharogroup/auth-api.svg)](http://www.javadoc.io/doc/de.alpharogroup/auth-api) auth-api
-
 [![Javadoc](http://www.javadoc.io/badge/de.alpharogroup/auth.svg)](http://www.javadoc.io/doc/de.alpharogroup/auth) auth
 
 ## Maven dependency
