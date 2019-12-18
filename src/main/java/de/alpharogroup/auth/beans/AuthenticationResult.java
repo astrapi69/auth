@@ -26,13 +26,8 @@ package de.alpharogroup.auth.beans;
 
 import java.util.Set;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 /**
  * The class {@link AuthenticationResult} holds the user object and a set of authentication errors
@@ -43,20 +38,22 @@ import lombok.ToString;
  * @param <E>
  *            the generic element type of the authentication errors
  */
-@Getter
-@Setter
-@EqualsAndHashCode
-@ToString
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder(toBuilder = true)
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class AuthenticationResult<U, E>
 {
 
 	/** The user object. */
-	private U user;
+	U user;
 
 	/** The authentication errors. */
-	private Set<E> validationErrors;
+	Set<E> validationErrors;
+
+	/** The flag that can be set to true if the result is valid */
+	boolean valid;
+
 
 }
