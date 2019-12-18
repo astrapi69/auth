@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>de.alpharogroup</groupId>
 		<artifactId>mvn-java-parent</artifactId>
-		<version>5</version>
+		<version>5.5</version>
 		<relativePath></relativePath>
 	</parent>
 
@@ -28,15 +28,15 @@
 		<!-- AUTH-API version -->
 		<auth-api.version>5.3</auth-api.version>
 		<!-- FILE-WORKER version -->
-		<file-worker.version>5.2</file-worker.version>
+		<file-worker.version>5.4</file-worker.version>
 		<!-- TEST-OBJECTS version -->
 		<test-objects.version>5.2</test-objects.version>
 		<!-- SILLY-COLLECTIONS version -->
-		<silly-collections.version>5.2.1</silly-collections.version>
+		<silly-collections.version>5.8</silly-collections.version>
 		<!-- JOBJ-CONTRACT-VERIFIER version -->
 		<jobj-contract-verifier.version>3.2</jobj-contract-verifier.version>
 		<!-- RANDOMIZER-CORE version -->
-		<randomizer-core.version>6.1</randomizer-core.version>
+		<randomizer-core.version>6.4</randomizer-core.version>
 	</properties>
 
 	<licenses>

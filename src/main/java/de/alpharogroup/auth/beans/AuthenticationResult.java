@@ -26,7 +26,11 @@ package de.alpharogroup.auth.beans;
 
 import java.util.Set;
 
-import lombok.*;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
 /**
@@ -49,11 +53,11 @@ public class AuthenticationResult<U, E>
 	/** The user object. */
 	U user;
 
-	/** The authentication errors. */
-	Set<E> validationErrors;
-
 	/** The flag that can be set to true if the result is valid */
 	boolean valid;
+
+	/** The authentication errors. */
+	Set<E> validationErrors;
 
 
 }

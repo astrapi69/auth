@@ -41,7 +41,7 @@ import de.alpharogroup.auth.api.SessionContext;
 import de.alpharogroup.evaluate.object.verifier.ContractVerifier;
 import de.alpharogroup.file.csv.CsvFileExtensions;
 import de.alpharogroup.file.search.PathFinder;
-import de.alpharogroup.random.RandomObjectsExtensions;
+import de.alpharogroup.random.object.RandomObjectsExtensions;
 
 /**
  * The unit test class for the class {@link UserSessionContext}
