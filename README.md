@@ -56,7 +56,7 @@ You can first define the version properties:
 	<properties>
 			...
 		<!-- AUTH version -->
-		<auth.version>5.3.1</auth.version>
+		<auth.version>5.4</auth.version>
 			...
 	</properties>
 		...
@@ -70,6 +70,23 @@ You can first define the version properties:
 			</dependency>
 			...
 		</dependencies>
+			
+## gradle dependency
+
+You can first define the version in the ext section and add than the following gradle dependency to your project `build.gradle` if you want to import the core functionality of auth:
+
+```
+ext {
+			...
+    authVersion = "5.4"
+			...
+}
+dependencies {
+			...
+compile "de.alpharogroup:auth:${authVersion}"
+			...
+}
+```
 
 ## Semantic Versioning
 
