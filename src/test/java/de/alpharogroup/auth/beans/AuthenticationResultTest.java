@@ -46,7 +46,7 @@ public class AuthenticationResultTest
 	{
 		AuthenticationResult<String, String> model = new AuthenticationResult<>();
 		assertNotNull(model);
-		model = new AuthenticationResult<>("value", SetFactory.newHashSet("foo"));
+		model = new AuthenticationResult<>("value", false, SetFactory.newHashSet("foo"));
 		assertNotNull(model);
 		model = AuthenticationResult.<String, String> builder().build();
 		assertNotNull(model);

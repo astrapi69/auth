@@ -2,8 +2,8 @@
 
 <div align="center">
 
-[![Build Status](https://travis-ci.org/astrapi69/auth.svg?branch=master)](https://travis-ci.org/astrapi69/auth) 
-[![Coverage Status](https://coveralls.io/repos/github/astrapi69/auth/badge.svg?branch=master)](https://coveralls.io/github/astrapi69/auth?branch=master) 
+[![Build Status](https://travis-ci.org/astrapi69/auth.svg?branch=develop)](https://travis-ci.org/astrapi69/auth) 
+[![Coverage Status](https://coveralls.io/repos/github/astrapi69/auth/badge.svg?branch=develop)](https://coveralls.io/github/astrapi69/auth?branch=develop) 
 [![Open Issues](https://img.shields.io/github/issues/astrapi69/auth.svg?style=flat)](https://github.com/astrapi69/auth/issues) 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.alpharogroup/auth/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.alpharogroup/auth)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](http://opensource.org/licenses/MIT)
@@ -56,7 +56,7 @@ You can first define the version properties:
 	<properties>
 			...
 		<!-- AUTH version -->
-		<auth.version>5.3.1</auth.version>
+		<auth.version>5.4</auth.version>
 			...
 	</properties>
 		...
@@ -70,6 +70,23 @@ You can first define the version properties:
 			</dependency>
 			...
 		</dependencies>
+			
+## gradle dependency
+
+You can first define the version in the ext section and add than the following gradle dependency to your project `build.gradle` if you want to import the core functionality of auth:
+
+```
+ext {
+			...
+    authVersion = "5.4"
+			...
+}
+dependencies {
+			...
+compile "de.alpharogroup:auth:${authVersion}"
+			...
+}
+```
 
 ## Semantic Versioning
 
@@ -107,7 +124,7 @@ Here is a list of awesome projects:
 |**Travis CI**|
 |     :---:      |
 |[![Travis CI](https://travis-ci.com/images/logos/TravisCI-Full-Color.png)]|
-|[![Build Status](https://travis-ci.org/astrapi69/auth.svg?branch=master)](https://travis-ci.org/astrapi69/auth)|
+|[![Build Status](https://travis-ci.org/astrapi69/auth.svg?branch=develop)](https://travis-ci.org/astrapi69/auth)|
 |Special thanks to [Travis CI](https://travis-ci.org) for providing a free continuous integration service for open source projects|
 |     <img width=1000/>     |
 
@@ -119,7 +136,7 @@ Here is a list of awesome projects:
 
 |**coveralls.io**|
 |     :---:      |
-|[![Coverage Status](https://coveralls.io/repos/github/astrapi69/auth/badge.svg?branch=master)](https://coveralls.io/github/astrapi69/auth?branch=master)|
+|[![Coverage Status](https://coveralls.io/repos/github/astrapi69/auth/badge.svg?branch=develop)](https://coveralls.io/github/astrapi69/auth?branch=develop)|
 |Special thanks to [coveralls.io](https://coveralls.io) for providing a free code coverage for open source projects|
 |     <img width=1000/>     |
 

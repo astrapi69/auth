@@ -7,12 +7,12 @@
 	<parent>
 		<groupId>de.alpharogroup</groupId>
 		<artifactId>mvn-java-parent</artifactId>
-		<version>5</version>
+		<version>5.5</version>
 		<relativePath></relativePath>
 	</parent>
 
 	<artifactId>auth</artifactId>
-	<version>5.3.1</version>
+	<version>5.4</version>
 	<packaging>jar</packaging>
 	<inceptionYear>2015</inceptionYear>
 
@@ -28,15 +28,15 @@
 		<!-- AUTH-API version -->
 		<auth-api.version>5.3</auth-api.version>
 		<!-- FILE-WORKER version -->
-		<file-worker.version>5.2</file-worker.version>
+		<file-worker.version>5.4</file-worker.version>
 		<!-- TEST-OBJECTS version -->
 		<test-objects.version>5.2</test-objects.version>
 		<!-- SILLY-COLLECTIONS version -->
-		<silly-collections.version>5.2.1</silly-collections.version>
+		<silly-collections.version>5.8</silly-collections.version>
 		<!-- JOBJ-CONTRACT-VERIFIER version -->
 		<jobj-contract-verifier.version>3.2</jobj-contract-verifier.version>
 		<!-- RANDOMIZER-CORE version -->
-		<randomizer-core.version>6.1</randomizer-core.version>
+		<randomizer-core.version>6.4</randomizer-core.version>
 	</properties>
 
 	<licenses>
@@ -158,4 +158,115 @@
 
 	</dependencies>
 
+	<build>
+
+		<resources>
+
+			<resource>
+				<filtering>false</filtering>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**</include>
+				</includes>
+				<excludes>
+					<exclude>**/*.java</exclude>
+					<exclude>**/package.html</exclude>
+				</excludes>
+			</resource>
+
+			<resource>
+				<filtering>false</filtering>
+				<directory>src/main/resources</directory>
+			</resource>
+
+			<resource>
+				<filtering>false</filtering>
+				<directory>src/site</directory>
+			</resource>
+
+		</resources>
+
+		<testResources>
+
+			<testResource>
+				<filtering>false</filtering>
+				<directory>src/test/java</directory>
+				<includes>
+					<include>**</include>
+				</includes>
+				<excludes>
+					<exclude>**/*.java</exclude>
+					<exclude>**/package.html</exclude>
+				</excludes>
+			</testResource>
+			<testResource>
+				<filtering>false</filtering>
+				<directory>src/test/resources</directory>
+			</testResource>
+
+		</testResources>
+
+		<pluginManagement>
+
+			<plugins>
+
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>cobertura-maven-plugin</artifactId>
+					<configuration>
+						<instrumentation>
+							<excludes>
+								<!-- abstract classes -->
+								<!-- enums -->
+								<!-- beans -->
+								<!-- constant classes with only constants -->
+								<!-- deprecated classes -->
+								<!-- interfaces -->
+								<!-- exceptions -->
+								<exclude>de/alpharogroup/auth/exceptions/**/*.class</exclude>
+								<!-- experimental classes -->
+								<!-- explicit abstract classes -->
+								<!-- explicit annotations -->
+								<!-- explicit bean classes -->
+								<!-- explicit deprecated classes -->
+								<!-- explicit interfaces -->
+								<!-- explicit constant classes with only constants -->
+								<!-- explicit delegation classes -->
+							</excludes>
+						</instrumentation>
+					</configuration>
+					<executions>
+						<execution>
+							<goals>
+								<goal>clean</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+			</plugins>
+
+		</pluginManagement>
+
+		<plugins>
+
+			<plugin>
+				<inherited>true</inherited>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<inherited>true</inherited>
+				<artifactId>maven-source-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<inherited>true</inherited>
+				<artifactId>maven-eclipse-plugin</artifactId>
+			</plugin>
+
+		</plugins>
+
+	</build>
+	
 </project>

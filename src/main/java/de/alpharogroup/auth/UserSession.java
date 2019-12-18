@@ -33,7 +33,7 @@ import de.alpharogroup.auth.api.Role;
 import de.alpharogroup.auth.api.Session;
 import de.alpharogroup.auth.api.User;
 import de.alpharogroup.collections.map.InsertionOrderMap;
-import de.alpharogroup.random.RandomObjectsExtensions;
+import de.alpharogroup.random.object.RandomObjectsExtensions;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;

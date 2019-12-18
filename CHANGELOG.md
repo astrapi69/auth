@@ -1,6 +1,20 @@
 ## Change log
 ----------------------
 
+Version 5.4
+-------------
+
+ADDED:
+
+- new flag that indicates that the validation was successful created in the class AuthenticationResult
+
+CHANGED:
+
+- update of parent version to 5.5
+- update of file-worker version to 5.4
+- update of dependency silly-collections version to 5.8
+- update of randomizer-core dependency version to 6.4
+
 Version 5.3.1
 -------------
 
