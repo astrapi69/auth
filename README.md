@@ -44,19 +44,19 @@ your project `build.gradle` if you want to import the core functionality of auth
 define version in file gradle.properties
 
 ```
-javaLibraryTemplateVersion=1
+authVersion=6
 ```
 
 or in build.gradle ext area
 
 ```
-    javaLibraryTemplateVersion = "1"
+    authVersion = "6"
 ```
 
 then add the dependency to the dependencies area
 
 ```
-    implementation("io.github.astrapi69:auth:$javaLibraryTemplateVersion")
+    implementation("io.github.astrapi69:auth:$authVersion")
 ```
 
 ## Maven dependency
@@ -72,7 +72,7 @@ Than you can add the dependency to your dependencies:
     <properties>
             ...
         <!-- auth version -->
-        <auth.version>1</auth.version>
+        <auth.version>6</auth.version>
             ...
     </properties>
             ...
