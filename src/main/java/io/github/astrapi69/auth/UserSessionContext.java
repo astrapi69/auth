@@ -45,6 +45,15 @@ public class UserSessionContext implements SessionContext<String, String, String
 	 * The serialVersionUID.
 	 */
 	private static final long serialVersionUID = -7176164226848814834L;
+	/** The online sessions. */
+	private final Map<String, Session<String, String>> onlineSessions = new LinkedHashMap<>();
+
+	/**
+	 * Instantiates a new {@link UserSessionContext}. Private constructor.
+	 */
+	private UserSessionContext()
+	{
+	}
 
 	/**
 	 * Returns the field <code>instance</code>.
@@ -54,16 +63,6 @@ public class UserSessionContext implements SessionContext<String, String, String
 	public static SessionContext<String, String, String> getInstance()
 	{
 		return instance;
-	}
-
-	/** The online sessions. */
-	private final Map<String, Session<String, String>> onlineSessions = new LinkedHashMap<>();
-
-	/**
-	 * Instantiates a new {@link UserSessionContext}. Private constructor.
-	 */
-	private UserSessionContext()
-	{
 	}
 
 	/**

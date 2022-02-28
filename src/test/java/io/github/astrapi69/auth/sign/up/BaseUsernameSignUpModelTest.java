@@ -24,9 +24,9 @@
  */
 package io.github.astrapi69.auth.sign.up;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotNull;
 import static org.testng.Assert.assertTrue;
-import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -61,14 +61,14 @@ public class BaseUsernameSignUpModelTest
 		assertTrue(model.getEmail().equals("foo@bar.org"));
 		assertTrue(model.getPassword().equals("secret"));
 		assertTrue(model.getRepeatPassword().equals("secret"));
-		assertTrue(model.isTermOfUseAccepted() == true);
+		assertTrue(model.isTermOfUseAccepted());
 		assertTrue(model.getUsername().equals("jim"));
 		model = new BaseUsernameSignUpModel("foo@bar.org", "secret", "secret", true, "jim");
 		assertNotNull(model);
 		assertTrue(model.getEmail().equals("foo@bar.org"));
 		assertTrue(model.getPassword().equals("secret"));
 		assertTrue(model.getRepeatPassword().equals("secret"));
-		assertTrue(model.isTermOfUseAccepted() == true);
+		assertTrue(model.isTermOfUseAccepted());
 		assertTrue(model.getUsername().equals("jim"));
 		model = BaseUsernameSignUpModel.builder().email("foo@bar.org").password("secret")
 			.repeatPassword("secret").termOfUseAccepted(true).username("jim").build();
@@ -76,7 +76,7 @@ public class BaseUsernameSignUpModelTest
 		assertTrue(model.getEmail().equals("foo@bar.org"));
 		assertTrue(model.getPassword().equals("secret"));
 		assertTrue(model.getRepeatPassword().equals("secret"));
-		assertTrue(model.isTermOfUseAccepted() == true);
+		assertTrue(model.isTermOfUseAccepted());
 		assertTrue(model.getUsername().equals("jim"));
 	}
 

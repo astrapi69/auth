@@ -24,7 +24,6 @@
  */
 package io.github.astrapi69.auth;
 
-import io.github.astrapi69.auth.api.Permission;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
@@ -32,6 +31,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import io.github.astrapi69.auth.api.Permission;
 
 /**
  * The class {@link SimplePermission}.

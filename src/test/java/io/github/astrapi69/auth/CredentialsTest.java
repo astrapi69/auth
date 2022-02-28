@@ -26,7 +26,6 @@ package io.github.astrapi69.auth;
 
 import static org.testng.AssertJUnit.assertTrue;
 
-import io.github.astrapi69.auth.Credentials;
 import org.meanbean.test.BeanTester;
 import org.testng.annotations.Test;
 

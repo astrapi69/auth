@@ -31,9 +31,6 @@ import static org.testng.AssertJUnit.assertNull;
 import java.io.File;
 import java.util.List;
 
-import io.github.astrapi69.auth.UserSession;
-import io.github.astrapi69.auth.UserSessionContext;
-import io.github.astrapi69.random.object.RandomWebObjectFactory;
 import org.meanbean.test.BeanTester;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -44,6 +41,7 @@ import io.github.astrapi69.auth.api.SessionContext;
 import io.github.astrapi69.evaluate.object.verifier.ContractVerifier;
 import io.github.astrapi69.file.csv.CsvFileExtensions;
 import io.github.astrapi69.file.search.PathFinder;
+import io.github.astrapi69.random.object.RandomWebObjectFactory;
 
 /**
  * The unit test class for the class {@link UserSessionContext}
@@ -74,12 +72,9 @@ public class UserSessionContextTest
 
 	/**
 	 * Tear down method will be invoked after every unit test method in this class.
-	 *
-	 * @throws Exception
-	 *             the exception
 	 */
 	@AfterMethod
-	protected void tearDown() throws Exception
+	protected void tearDown()
 	{
 	}
 

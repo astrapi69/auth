@@ -26,10 +26,6 @@ package io.github.astrapi69.auth;
 
 import java.util.Set;
 
-import io.github.astrapi69.auth.api.Permission;
-import io.github.astrapi69.auth.api.Role;
-import io.github.astrapi69.auth.api.User;
-import io.github.astrapi69.collections.set.SetFactory;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
@@ -38,6 +34,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.Singular;
 import lombok.ToString;
+import io.github.astrapi69.auth.api.Permission;
+import io.github.astrapi69.auth.api.Role;
+import io.github.astrapi69.auth.api.User;
+import io.github.astrapi69.collections.set.SetFactory;
 
 /**
  * The class {@link SimpleUser}.

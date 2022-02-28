@@ -29,7 +29,6 @@ import static org.testng.Assert.assertTrue;
 import java.io.File;
 import java.util.List;
 
-import io.github.astrapi69.auth.SimplePermission;
 import org.meanbean.test.BeanTester;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;

@@ -24,9 +24,9 @@
  */
 package io.github.astrapi69.auth.sign.in;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotNull;
 import static org.testng.Assert.assertTrue;
-import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -72,21 +72,9 @@ public class SignInWithRedirectionModelTest
 	 * Test method for {@link SignInWithRedirectionModel#equals(Object)} ,
 	 * {@link SignInWithRedirectionModel#hashCode()} and
 	 * {@link SignInWithRedirectionModel#toString()}
-	 *
-	 * @throws IllegalAccessException
-	 *             if the caller does not have access to the property accessor method
-	 * @throws InstantiationException
-	 *             if a new instance of the bean's class cannot be instantiated
-	 * @throws InvocationTargetException
-	 *             if the property accessor method throws an exception
-	 * @throws NoSuchMethodException
-	 *             if an accessor method for this property cannot be found
-	 * @throws IOException
-	 *             Signals that an I/O exception has occurred
 	 */
 	@Test
-	public void testEqualsHashcodeAndToStringWithClass() throws NoSuchMethodException,
-		IllegalAccessException, InvocationTargetException, InstantiationException, IOException
+	public void testEqualsHashcodeAndToStringWithClass()
 	{
 		Optional<ContractViolation> expected;
 		Optional<ContractViolation> actual;

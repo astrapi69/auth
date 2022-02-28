@@ -25,12 +25,12 @@
 package io.github.astrapi69.auth.token;
 
 
+import static org.testng.AssertJUnit.assertNotNull;
+
 import org.meanbean.test.BeanTester;
 import org.testng.annotations.Test;
 
 import io.github.astrapi69.evaluate.object.verifier.ContractVerifier;
-
-import static org.testng.AssertJUnit.assertNotNull;
 
 /**
  * The unit test class for the class {@link AuthToken}

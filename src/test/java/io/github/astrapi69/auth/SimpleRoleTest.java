@@ -32,8 +32,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import io.github.astrapi69.auth.SimplePermission;
-import io.github.astrapi69.auth.SimpleRole;
 import org.meanbean.test.BeanTester;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -86,12 +84,9 @@ public class SimpleRoleTest
 
 	/**
 	 * Tear down method will be invoked after every unit test method in this class.
-	 *
-	 * @throws Exception
-	 *             the exception
 	 */
 	@AfterMethod
-	protected void tearDown() throws Exception
+	protected void tearDown()
 	{
 	}
 
