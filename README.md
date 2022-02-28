@@ -192,12 +192,6 @@ Here is a list of awesome projects:
 |Special thanks to [sonatype repository](https://www.sonatype.com) for providing a free maven repository service for open source projects|
 |     <img width=1000/>     |
 
-|**coveralls.io**|
-|     :---:      |
-|[![Coverage Status](https://coveralls.io/repos/github/astrapi69/auth/badge.svg?branch=develop)](https://coveralls.io/github/astrapi69/auth?branch=develop)|
-|Special thanks to [coveralls.io](https://coveralls.io) for providing a free code coverage for open source projects|
-|     <img width=1000/>     |
-
 |**javadoc.io**|
 |     :---:      |
 |[![Javadoc](http://www.javadoc.io/badge/io.github.astrapi69/auth.svg)](http://www.javadoc.io/doc/io.github.astrapi69/auth) auth|
