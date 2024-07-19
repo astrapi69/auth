@@ -28,6 +28,12 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Map;
 
+import io.github.astrapi69.auth.api.Permission;
+import io.github.astrapi69.auth.api.Role;
+import io.github.astrapi69.auth.api.Session;
+import io.github.astrapi69.auth.api.User;
+import io.github.astrapi69.collections.map.InsertionOrderMap;
+import io.github.astrapi69.random.object.RandomWebObjectFactory;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
@@ -35,12 +41,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import io.github.astrapi69.auth.api.Permission;
-import io.github.astrapi69.auth.api.Role;
-import io.github.astrapi69.auth.api.Session;
-import io.github.astrapi69.auth.api.User;
-import io.github.astrapi69.collections.map.InsertionOrderMap;
-import io.github.astrapi69.random.object.RandomWebObjectFactory;
 
 /**
  * The class {@link UserSession}.

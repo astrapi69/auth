@@ -1,0 +1,17 @@
+dependencies {
+    compileOnly libs.lombok
+    annotationProcessor libs.lombok
+    testCompileOnly libs.lombok
+    testAnnotationProcessor libs.lombok
+
+    implementation libs.auth.api
+    implementation libs.randomizer
+    implementation libs.silly.collections
+
+    testImplementation libs.file.worker
+    testImplementation libs.jobj.contract.verifier
+    testImplementation libs.meanbean
+    testImplementation libs.meanbean.factories
+    // Note: use of bundles...
+    testImplementation libs.bundles.unit.testing
+}
