@@ -24,27 +24,28 @@
  */
 package io.github.astrapi69.auth;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.AssertJUnit.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.io.File;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.meanbean.lang.Factory;
 import org.meanbean.test.BeanTester;
 import org.meanbean.test.Configuration;
 import org.meanbean.test.ConfigurationBuilder;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
 import io.github.astrapi69.auth.api.Permission;
 import io.github.astrapi69.auth.api.Role;
 import io.github.astrapi69.auth.api.Session;
 import io.github.astrapi69.auth.api.User;
-import io.github.astrapi69.collections.set.SetFactory;
+import io.github.astrapi69.collection.set.SetFactory;
 import io.github.astrapi69.file.csv.CsvFileExtensions;
 import io.github.astrapi69.file.search.PathFinder;
 import io.github.astrapi69.meanbean.factories.LocaleFactory;
@@ -88,7 +89,7 @@ public class UserSessionTest
 	 * @throws Exception
 	 *             the exception
 	 */
-	@BeforeMethod
+	@BeforeEach
 	protected void setUp() throws Exception
 	{
 		final File srctestresDir = PathFinder.getSrcTestResourcesDir();
@@ -130,7 +131,7 @@ public class UserSessionTest
 	/**
 	 * Tear down method will be invoked after every unit test method in this class.
 	 */
-	@AfterMethod
+	@AfterEach
 	protected void tearDown()
 	{
 		testsession = null;
@@ -152,10 +153,13 @@ public class UserSessionTest
 		assertEquals(expected, actual);
 	}
 
-	@Test(expectedExceptions = IllegalArgumentException.class)
+	@Test
 	public void testUserSessionConstructorNull()
 	{
-		testsession = new UserSession(null);
+
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			testsession = new UserSession(null);
+		});
 	}
 
 	/**

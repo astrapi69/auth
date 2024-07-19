@@ -24,7 +24,7 @@
  */
 package io.github.astrapi69.auth;
 
-import static org.testng.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.File;
 import java.util.Collection;
@@ -32,10 +32,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.meanbean.test.BeanTester;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
 import io.github.astrapi69.auth.api.Permission;
 import io.github.astrapi69.auth.api.Role;
@@ -63,7 +63,7 @@ public class SimpleRoleTest
 	 * @throws Exception
 	 *             the exception
 	 */
-	@BeforeMethod
+	@BeforeEach
 	protected void setUp() throws Exception
 	{
 		final File srctestresDir = PathFinder.getSrcTestResourcesDir();
@@ -85,7 +85,7 @@ public class SimpleRoleTest
 	/**
 	 * Tear down method will be invoked after every unit test method in this class.
 	 */
-	@AfterMethod
+	@AfterEach
 	protected void tearDown()
 	{
 	}

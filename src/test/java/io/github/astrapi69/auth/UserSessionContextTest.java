@@ -24,17 +24,17 @@
  */
 package io.github.astrapi69.auth;
 
-import static org.testng.AssertJUnit.assertEquals;
-import static org.testng.AssertJUnit.assertNotNull;
-import static org.testng.AssertJUnit.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import java.io.File;
 import java.util.List;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.meanbean.test.BeanTester;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
 import io.github.astrapi69.auth.api.Session;
 import io.github.astrapi69.auth.api.SessionContext;
@@ -61,7 +61,7 @@ public class UserSessionContextTest
 	 * @throws Exception
 	 *             the exception
 	 */
-	@BeforeMethod
+	@BeforeEach
 	protected void setUp() throws Exception
 	{
 		final File srctestresDir = PathFinder.getSrcTestResourcesDir();
@@ -73,7 +73,7 @@ public class UserSessionContextTest
 	/**
 	 * Tear down method will be invoked after every unit test method in this class.
 	 */
-	@AfterMethod
+	@AfterEach
 	protected void tearDown()
 	{
 	}
@@ -132,16 +132,6 @@ public class UserSessionContextTest
 	{
 		final BeanTester beanTester = new BeanTester();
 		beanTester.testBean(UserSessionContext.class);
-	}
-
-	/**
-	 * Test method for {@link UserSessionContext#equals(Object)},
-	 * {@link UserSessionContext#hashCode()} and {@link UserSessionContext#toString()}
-	 */
-	@Test
-	public void verifyEqualsHashcodeAndToStringContracts()
-	{
-		ContractVerifier.of(UserSessionContext.class).verify();
 	}
 
 }

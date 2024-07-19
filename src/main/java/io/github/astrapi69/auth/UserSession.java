@@ -32,7 +32,7 @@ import io.github.astrapi69.auth.api.Permission;
 import io.github.astrapi69.auth.api.Role;
 import io.github.astrapi69.auth.api.Session;
 import io.github.astrapi69.auth.api.User;
-import io.github.astrapi69.collections.map.InsertionOrderMap;
+import io.github.astrapi69.collection.map.InsertionOrderMap;
 import io.github.astrapi69.random.object.RandomWebObjectFactory;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

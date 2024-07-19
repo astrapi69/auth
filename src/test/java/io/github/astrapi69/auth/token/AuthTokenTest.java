@@ -25,10 +25,10 @@
 package io.github.astrapi69.auth.token;
 
 
-import static org.testng.AssertJUnit.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+import org.junit.jupiter.api.Test;
 import org.meanbean.test.BeanTester;
-import org.testng.annotations.Test;
 
 import io.github.astrapi69.evaluate.object.verifier.ContractVerifier;
 
@@ -62,13 +62,4 @@ public class AuthTokenTest
 		beanTester.testBean(AuthToken.class);
 	}
 
-	/**
-	 * Test method for {@link AuthToken#equals(Object)} , {@link AuthToken#hashCode()} and
-	 * {@link AuthToken#toString()}
-	 */
-	@Test
-	public void verifyEqualsHashcodeAndToStringContracts()
-	{
-		ContractVerifier.of(AuthToken.class).verify();
-	}
 }

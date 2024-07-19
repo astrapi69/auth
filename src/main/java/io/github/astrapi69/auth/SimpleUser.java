@@ -29,7 +29,7 @@ import java.util.Set;
 import io.github.astrapi69.auth.api.Permission;
 import io.github.astrapi69.auth.api.Role;
 import io.github.astrapi69.auth.api.User;
-import io.github.astrapi69.collections.set.SetFactory;
+import io.github.astrapi69.collection.set.SetFactory;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;

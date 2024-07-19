@@ -4,6 +4,15 @@
 Version 7-SNAPSHOT
 -------------
 
+CHANGED:
+
+- update to jdk version 17
+- update gradle to new version 8.9
+- update of gradle-plugin dependency with id 'com.github.ben-manes.versions' to new patch version 0.51.0
+- update of gradle-plugin dependency with id 'org.ajoberstar.grgit' to new patch version 5.2.2
+- update of gradle-plugin dependency with id 'io.freefair.lombok' to new patch version 8.6
+- update of gradle-plugin dependency with id 'com.diffplug.spotless' to new beta version 7.0.0.BETA1
+
 Version 6
 -------------
 

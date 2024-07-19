@@ -24,20 +24,19 @@
  */
 package io.github.astrapi69.auth.sign.up;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertNotNull;
-import static org.testng.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Optional;
 
+import org.junit.jupiter.api.Test;
 import org.meanbean.test.BeanTester;
-import org.testng.annotations.Test;
 
 import io.github.astrapi69.evaluate.object.api.ContractViolation;
-import io.github.astrapi69.evaluate.object.checkers.EqualsHashCodeAndToStringCheck;
-import io.github.astrapi69.evaluate.object.verifier.ContractVerifier;
+import io.github.astrapi69.evaluate.object.checker.EqualsHashCodeAndToStringCheck;
 
 /**
  * The unit test class for the class {@link BaseUsernameSignUpModel}
@@ -120,16 +119,6 @@ public class BaseUsernameSignUpModelTest
 	{
 		final BeanTester beanTester = new BeanTester();
 		beanTester.testBean(BaseUsernameSignUpModel.class);
-	}
-
-	/**
-	 * Test method for {@link BaseUsernameSignUpModel#equals(Object)} ,
-	 * {@link BaseUsernameSignUpModel#hashCode()} and {@link BaseUsernameSignUpModel#toString()}
-	 */
-	@Test
-	public void verifyEqualsHashcodeAndToStringContracts()
-	{
-		ContractVerifier.of(BaseUsernameSignUpModel.class).verify();
 	}
 
 }

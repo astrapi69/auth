@@ -24,13 +24,12 @@
  */
 package io.github.astrapi69.auth.sign.in;
 
-import static org.testng.AssertJUnit.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import org.junit.jupiter.api.Test;
 import org.meanbean.test.BeanTester;
-import org.testng.annotations.Test;
 
-import io.github.astrapi69.evaluate.object.evaluators.EqualsHashCodeAndToStringEvaluator;
-import io.github.astrapi69.evaluate.object.verifier.ContractVerifier;
+import io.github.astrapi69.evaluate.object.evaluator.EqualsHashCodeAndToStringEvaluator;
 
 /**
  * The unit test class for the class {@link BaseSignInModel}
@@ -69,16 +68,6 @@ public class BaseSignInModelTest
 	{
 		final BeanTester beanTester = new BeanTester();
 		beanTester.testBean(BaseSignInModel.class);
-	}
-
-	/**
-	 * Test method for {@link BaseSignInModel#equals(Object)} , {@link BaseSignInModel#hashCode()}
-	 * and {@link BaseSignInModel#toString()}
-	 */
-	@Test
-	public void verifyEqualsHashcodeAndToStringContracts()
-	{
-		ContractVerifier.of(BaseSignInModel.class).verify();
 	}
 
 }

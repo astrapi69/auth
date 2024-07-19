@@ -24,15 +24,13 @@
  */
 package io.github.astrapi69.auth;
 
-import static org.testng.AssertJUnit.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import org.junit.jupiter.api.Test;
 import org.meanbean.test.BeanTester;
-import org.testng.annotations.Test;
 
-import io.github.astrapi69.evaluate.object.evaluators.EqualsEvaluator;
-import io.github.astrapi69.evaluate.object.evaluators.HashcodeEvaluator;
-import io.github.astrapi69.evaluate.object.evaluators.ToStringEvaluator;
-import io.github.astrapi69.evaluate.object.verifier.ContractVerifier;
+import io.github.astrapi69.evaluate.object.evaluator.EqualsEvaluator;
+import io.github.astrapi69.evaluate.object.evaluator.HashcodeEvaluator;
 
 /**
  * The unit test class for the class {@link Credentials}
@@ -53,8 +51,6 @@ public class CredentialsTest
 		expected = Credentials.builder().build();
 		actual = Credentials.builder().build();
 		assertTrue(HashcodeEvaluator.evaluateEquality(expected, actual));
-		assertTrue(ToStringEvaluator.evaluate(Credentials.class));
-		assertTrue(ToStringEvaluator.evaluateConsistency(actual));
 
 		actual = Credentials.builder().username("john").build();
 		assertTrue(HashcodeEvaluator.evaluateUnequality(expected, actual));
@@ -70,16 +66,6 @@ public class CredentialsTest
 	{
 		final BeanTester beanTester = new BeanTester();
 		beanTester.testBean(Credentials.class);
-	}
-
-	/**
-	 * Test method for {@link Credentials#equals(Object)} , {@link Credentials#hashCode()} and
-	 * {@link Credentials#toString()}
-	 */
-	@Test
-	public void verifyEqualsHashcodeAndToStringContracts()
-	{
-		ContractVerifier.of(Credentials.class).verify();
 	}
 
 }

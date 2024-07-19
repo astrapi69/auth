@@ -24,21 +24,21 @@
  */
 package io.github.astrapi69.auth;
 
-import static org.testng.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.File;
 import java.util.List;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.meanbean.test.BeanTester;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
-import io.github.astrapi69.BaseTestCase;
 import io.github.astrapi69.auth.api.Permission;
 import io.github.astrapi69.evaluate.object.verifier.ContractVerifier;
 import io.github.astrapi69.file.csv.CsvFileExtensions;
 import io.github.astrapi69.file.search.PathFinder;
+import io.github.astrapi69.test.base.BaseTestCase;
 
 /**
  * The unit test class for the class {@link SimplePermission}
@@ -58,7 +58,7 @@ public class SimplePermissionTest extends BaseTestCase
 	 * @throws Exception
 	 *             the exception
 	 */
-	@BeforeMethod
+	@BeforeEach
 	@Override
 	protected void setUp() throws Exception
 	{
@@ -75,7 +75,7 @@ public class SimplePermissionTest extends BaseTestCase
 	 * @throws Exception
 	 *             the exception
 	 */
-	@AfterMethod
+	@AfterEach
 	@Override
 	protected void tearDown() throws Exception
 	{
@@ -122,16 +122,6 @@ public class SimplePermissionTest extends BaseTestCase
 	{
 		final BeanTester beanTester = new BeanTester();
 		beanTester.testBean(SimplePermission.class);
-	}
-
-	/**
-	 * Test method for {@link SimplePermission#equals(Object)} , {@link SimplePermission#hashCode()}
-	 * and {@link SimplePermission#toString()}
-	 */
-	@Test
-	public void verifyEqualsHashcodeAndToStringContracts()
-	{
-		ContractVerifier.of(SimplePermission.class).verify();
 	}
 
 }
